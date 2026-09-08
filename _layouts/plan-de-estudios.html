@@ -71,10 +71,16 @@ layout: default
     por código; las que no tienen código propio (materias de otras carreras) quedan al
     final de su grupo, ordenadas por nombre.
   {% endcomment %}
-  {% assign ing_con_codigo = site.data.optativas | where_exp: "o", "o.area == 'Ingeniería' and o.codigo != nil" | sort: "codigo" %}
-  {% assign ing_sin_codigo = site.data.optativas | where_exp: "o", "o.area == 'Ingeniería' and o.codigo == nil" | sort: "nombre" %}
-  {% assign resto_con_codigo = site.data.optativas | where_exp: "o", "o.area != 'Ingeniería' and o.codigo != nil" | sort: "codigo" %}
-  {% assign resto_sin_codigo = site.data.optativas | where_exp: "o", "o.area != 'Ingeniería' and o.codigo == nil" | sort: "nombre" %}
+  {% comment %}
+    where_exp con "and" no anda en el Jekyll 3.x que usa GitHub Pages (github-pages gem),
+    así que se filtra en dos pasos encadenados en vez de una condición compuesta.
+  {% endcomment %}
+  {% assign optativas_ing = site.data.optativas | where_exp: "o", "o.area == 'Ingeniería'" %}
+  {% assign optativas_resto = site.data.optativas | where_exp: "o", "o.area != 'Ingeniería'" %}
+  {% assign ing_con_codigo = optativas_ing | where_exp: "o", "o.codigo != nil" | sort: "codigo" %}
+  {% assign ing_sin_codigo = optativas_ing | where_exp: "o", "o.codigo == nil" | sort: "nombre" %}
+  {% assign resto_con_codigo = optativas_resto | where_exp: "o", "o.codigo != nil" | sort: "codigo" %}
+  {% assign resto_sin_codigo = optativas_resto | where_exp: "o", "o.codigo == nil" | sort: "nombre" %}
   {% assign optativas = ing_con_codigo | concat: ing_sin_codigo | concat: resto_con_codigo | concat: resto_sin_codigo %}
   {% assign areas = optativas | map: "area" | compact | uniq | sort %}
   {% assign orientaciones = optativas | map: "orientacion" | compact | uniq | sort %}
