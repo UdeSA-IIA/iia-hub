@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% comment %}
+  Estructura y tablas de la página "Si recursás una materia".
+  El texto editable (la regla clave de arriba) vive en recursada.md.
+  Los datos vienen de _data/incompatibilidades.yml.
+{% endcomment %}
+
+{{ content }}
+
+<div class="legend">
+  <span><i class="dot danger"></i> Incompatibilidad total - ninguna combinación de grupos funciona</span>
+  <span><i class="dot warn"></i> Incompatibilidad parcial - hay al menos una combinación que sí funciona</span>
+</div>
+
+{% assign incs = site.data.incompatibilidades %}
+{% assign anios = incs | map: "anio" | uniq | sort %}
+{% assign materias = site.data.materias %}
+
+{% for anio in anios %}
+{% assign items = incs | where: "anio", anio %}
+<div class="section">
+  <h2>{{ anio }}° año</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Recursás</th><th>Querés cursar</th><th>Estado</th><th>Detalle / solución</th></tr>
+      </thead>
+      <tbody>
+        {% for i in items %}
+        {% assign recursa_mat = materias | where: "codigo", i.recursa_codigo | first %}
+        {% assign quiere_mat = materias | where: "codigo", i.quiere_codigo | first %}
+        <tr>
+          <td>
+            <strong>{{ i.recursa_sigla }}</strong> <span style="color:var(--ink-faint);">({{ i.recursa_codigo }})</span>
+            {% if recursa_mat %}<br><span style="color:var(--ink-faint); font-size:.8rem;">{{ recursa_mat.nombre }}</span>{% endif %}
+          </td>
+          <td>
+            <strong>{{ i.quiere_sigla }}</strong> <span style="color:var(--ink-faint);">({{ i.quiere_codigo }})</span>
+            {% if quiere_mat %}<br><span style="color:var(--ink-faint); font-size:.8rem;">{{ quiere_mat.nombre }}</span>{% endif %}
+          </td>
+          <td>
+            {% if i.estado == "total" %}
+              <span class="badge danger">Total</span>
+            {% else %}
+              <span class="badge warn">Parcial</span>
+            {% endif %}
+          </td>
+          <td>{{ i.detalle }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endfor %}

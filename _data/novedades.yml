@@ -1,0 +1,32 @@
+# NOVEDADES — datos de ejemplo para el prototipo. Reemplazar por novedades reales.
+# Cada entrada: fecha (AAAA-MM-DD), titulo, tag (opcional), cuerpo.
+# Se ordenan solas por fecha (la más nueva primero). El home muestra las 3 últimas.
+
+- fecha: 2026-09-05
+  titulo: "Charla informativa sobre la PPS"
+  tag: "Evento"
+  cuerpo: >
+    La Escuela de Ingeniería organiza una charla sobre cómo armar el Plan de Trabajo de la
+    Práctica Profesional Supervisada y qué esperar del proceso. Jueves 18 a las 18 h; el aula
+    se confirma por el Campus Virtual.
+
+- fecha: 2026-08-28
+  titulo: "Inscripción a materias de Primavera 2026"
+  tag: "Administrativo"
+  cuerpo: >
+    Hasta el 21 de agosto se pueden agregar o abandonar materias desde el Campus Virtual. Si
+    estás recursando algo, revisá antes la página de incompatibilidades de horario.
+
+- fecha: 2026-08-15
+  titulo: "Nuevas optativas de la orientación en Robótica"
+  tag: "Cursada"
+  cuerpo: >
+    Se sumaron dos optativas a la orientación en Robótica para el próximo semestre. Ya
+    aparecen en el listado de la página de Plan de estudios.
+
+- fecha: 2026-07-30
+  titulo: "AI Fest 2026: guardá la fecha"
+  tag: "Evento"
+  cuerpo: >
+    La próxima edición del AI Fest, el encuentro anual de la carrera, va a ser en octubre. En
+    las próximas semanas se publica el programa completo.

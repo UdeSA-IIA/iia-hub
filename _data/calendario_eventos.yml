@@ -1,0 +1,121 @@
+# Días puntuales del Calendario Académico 2026 para pintar en la vista de calendario
+# completo de calendario.html. Es la misma info de _data/calendario.yml, pero
+# desglosada día por día (en rangos) para poder colorearla.
+#
+# categoria: clave que matchea con una clase .cat-<categoria> en el CSS y con
+# "categorias" de acá abajo (color + etiqueta de la referencia).
+
+anio: 2026
+
+categorias:
+  - clave: hito
+    color: brand
+    etiqueta: "Hito del semestre"
+  - clave: administrativo
+    color: amber
+    etiqueta: "Trámite administrativo"
+  - clave: examenes
+    color: danger
+    etiqueta: "Exámenes"
+  - clave: receso
+    color: accent
+    etiqueta: "Receso / vacaciones"
+  - clave: feriado
+    color: coral
+    etiqueta: "Feriado nacional"
+
+eventos:
+  - titulo: "Acto de apertura"
+    categoria: hito
+    rangos:
+      - { inicio: "2026-02-27", fin: "2026-02-27" }
+
+  - titulo: "Inicio de clases - 1er semestre"
+    categoria: hito
+    rangos:
+      - { inicio: "2026-03-02", fin: "2026-03-02" }
+
+  - titulo: "Último día para agregar o abandonar materias - 1er semestre"
+    categoria: administrativo
+    rangos:
+      - { inicio: "2026-03-20", fin: "2026-03-20" }
+
+  - titulo: "Último día para dar de baja un curso por Gestión - 1er semestre"
+    categoria: administrativo
+    rangos:
+      - { inicio: "2026-04-24", fin: "2026-04-24" }
+
+  - titulo: "Exámenes parciales - 1er semestre"
+    categoria: examenes
+    rangos:
+      - { inicio: "2026-04-24", fin: "2026-04-25" }
+      - { inicio: "2026-04-27", fin: "2026-04-30" }
+      - { inicio: "2026-05-02", fin: "2026-05-02" }
+      - { inicio: "2026-05-04", fin: "2026-05-09" }
+
+  - titulo: "Exámenes finales - 1er semestre"
+    categoria: examenes
+    rangos:
+      - { inicio: "2026-06-27", fin: "2026-07-04" }
+
+  - titulo: "Recuperatorios y entrega de notas - 1er semestre"
+    categoria: administrativo
+    rangos:
+      - { inicio: "2026-07-13", fin: "2026-07-18" }
+
+  - titulo: "Vacaciones de invierno"
+    categoria: receso
+    rangos:
+      - { inicio: "2026-07-20", fin: "2026-07-31" }
+
+  - titulo: "Inicio de clases - 2do semestre"
+    categoria: hito
+    rangos:
+      - { inicio: "2026-08-03", fin: "2026-08-03" }
+
+  - titulo: "Último día para agregar o abandonar materias - 2do semestre"
+    categoria: administrativo
+    rangos:
+      - { inicio: "2026-08-21", fin: "2026-08-21" }
+
+  - titulo: "Último día para dar de baja un curso por Gestión - 2do semestre"
+    categoria: administrativo
+    rangos:
+      - { inicio: "2026-09-25", fin: "2026-09-25" }
+
+  - titulo: "Exámenes parciales - 2do semestre"
+    categoria: examenes
+    rangos:
+      - { inicio: "2026-09-25", fin: "2026-09-26" }
+      - { inicio: "2026-09-28", fin: "2026-09-30" }
+      - { inicio: "2026-10-01", fin: "2026-10-03" }
+      - { inicio: "2026-10-05", fin: "2026-10-10" }
+
+  - titulo: "Exámenes finales - 2do semestre"
+    categoria: examenes
+    rangos:
+      - { inicio: "2026-11-28", fin: "2026-11-28" }
+      - { inicio: "2026-11-30", fin: "2026-12-05" }
+
+  - titulo: "Recuperatorios y entrega de notas - 2do semestre"
+    categoria: administrativo
+    rangos:
+      - { inicio: "2026-12-14", fin: "2026-12-19" }
+
+  - titulo: "Feriado nacional"
+    categoria: feriado
+    rangos:
+      - { inicio: "2026-01-16", fin: "2026-01-17" }
+      - { inicio: "2026-03-24", fin: "2026-03-24" }
+      - { inicio: "2026-04-02", fin: "2026-04-03" }
+      - { inicio: "2026-05-01", fin: "2026-05-01" }
+      - { inicio: "2026-05-25", fin: "2026-05-25" }
+      - { inicio: "2026-06-15", fin: "2026-06-15" }
+      - { inicio: "2026-06-20", fin: "2026-06-20" }
+      - { inicio: "2026-07-09", fin: "2026-07-09" }
+      - { inicio: "2026-08-17", fin: "2026-08-17" }
+      - { inicio: "2026-09-12", fin: "2026-09-12" }
+      - { inicio: "2026-10-12", fin: "2026-10-12" }
+      - { inicio: "2026-11-23", fin: "2026-11-23" }
+      - { inicio: "2026-12-08", fin: "2026-12-08" }
+      - { inicio: "2026-12-25", fin: "2026-12-25" }

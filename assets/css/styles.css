@@ -69,8 +69,32 @@ body {
 
 img { max-width: 100%; display: block; }
 
-a { color: var(--teal); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: var(--ink-soft); text-decoration: none; }
+
+/* Subrayado solo en links "de párrafo" (prosa): texto corrido, listas,
+   citas y celdas de tabla. Las tarjetas (tiles, novedades, botones, etc.)
+   quedan sin subrayar. */
+p a, li a, blockquote a, td a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(255, 255, 255, .3);
+}
+p a:hover, li a:hover, blockquote a:hover, td a:hover { text-decoration-color: currentColor; }
+
+/* Iconos Material Symbols (cargados desde Google Fonts en default.html) */
+.ms {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "opsz" 24;
+}
 
 ::selection { background: var(--brand-soft); color: var(--ink); }
 
@@ -82,7 +106,7 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 
-h1, h2 {
+h1 {
   background: var(--grad);
   -webkit-background-clip: text;
   background-clip: text;
@@ -91,8 +115,8 @@ h1, h2 {
 }
 
 h1 { font-size: 2.15rem; font-weight: 700; }
-h2 { font-size: 1.45rem; font-weight: 600; }
-h3 { font-size: 1.12rem; font-weight: 600; color: var(--teal); }
+h2 { font-size: 1.45rem; font-weight: 600; color: var(--teal); }
+h3 { font-size: 1.12rem; font-weight: 600; }
 
 p { margin: 0 0 1em 0; color: var(--ink-soft); }
 
@@ -141,6 +165,8 @@ code {
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-brand {
@@ -222,7 +248,39 @@ code {
   box-shadow: 0 6px 14px -8px rgba(139, 109, 240, .6);
 }
 
-.nav-link .ic { font-size: 1rem; width: 1.1em; text-align: center; }
+.nav-link .ic { font-size: 1.05rem; width: 1.3em; text-align: center; }
+
+/* fila de redes sociales, siempre pegada abajo del sidebar */
+.sidebar-social {
+  margin-top: auto;
+  padding: 1rem .65rem 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.sidebar-social a {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-faint);
+  background: var(--bg-alt-2);
+  border: 1px solid var(--line);
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color .14s ease, border-color .14s ease, transform .14s ease;
+}
+
+.sidebar-social a:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+  transform: translateY(-1px);
+}
+.nav-link .ic.ms { font-size: 1.2rem; }
 
 /* Main column */
 .main { flex: 1; min-width: 0; }
@@ -290,6 +348,7 @@ code {
   border-radius: var(--radius);
   padding: 1.35rem 1.4rem;
   box-shadow: var(--shadow-sm);
+  text-decoration: none;
   transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
   position: relative;
 }
@@ -310,7 +369,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: .9rem;
 }
 
@@ -321,6 +380,19 @@ code {
 
 .tile h3 { margin-bottom: .3rem; color: var(--ink); font-size: 1.05rem; background: none; -webkit-text-fill-color: var(--ink); }
 .tile p { margin: 0; font-size: .88rem; }
+
+/* variante compacta de la grilla "Explorá el sitio" */
+.tiles-compact { gap: .75rem; }
+.tiles-compact .tile { padding: .95rem 1.05rem; }
+.tiles-compact .tile .ic {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  font-size: 1.15rem;
+  margin-bottom: .55rem;
+}
+.tiles-compact .tile h3 { font-size: .95rem; margin-bottom: .15rem; }
+.tiles-compact .tile p { font-size: .8rem; line-height: 1.45; }
 
 .hero {
   background:
@@ -383,6 +455,40 @@ code {
 
 .callout p:last-child { margin-bottom: 0; }
 
+/* ---------- contenido escrito en Markdown puro ----------
+   Las páginas de contenido son .md sin HTML: Jekyll las compila y
+   el resultado se inyecta como hijo directo de .content. Estas reglas
+   le dan a ese HTML "desnudo" el mismo ritmo que los componentes. */
+
+.hero-actions { margin-top: 1.3rem; display: flex; gap: .7rem; flex-wrap: wrap; }
+
+.content > h2 { margin-top: 2.8rem; }
+.content > h3 { margin-top: 1.9rem; }
+.content > h2:first-child,
+.content > h3:first-child,
+.page-head + h2,
+.page-head + h3 { margin-top: 0; }
+
+.content > ul,
+.content > ol { margin: 0 0 1.3rem; padding-left: 1.35rem; color: var(--ink-soft); }
+.content > ul > li,
+.content > ol > li { margin: .35rem 0; }
+
+.content > blockquote {
+  margin: 1.3rem 0;
+  padding: 1.05rem 1.3rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--violet);
+  border-radius: var(--radius);
+  background: var(--brand-soft);
+  color: var(--ink-soft);
+}
+.content > blockquote p { margin: 0 0 .55em; }
+.content > blockquote p:last-child { margin-bottom: 0; }
+
+/* Las tablas Markdown no vienen envueltas: que scrolleen solas en mobile. */
+.content > table { display: block; overflow-x: auto; max-width: 100%; }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -404,7 +510,7 @@ th {
   font-size: .7rem;
   text-transform: uppercase;
   letter-spacing: .05em;
-  color: var(--teal);
+  color: var(--pink);
   font-weight: 700;
   background: rgba(255,255,255,.04);
 }
@@ -473,6 +579,10 @@ tr:hover td { background: var(--brand-soft) !important; }
 }
 
 .link-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .65rem; }
+.link-list.cols-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 620px) {
+  .link-list.cols-2 { grid-template-columns: 1fr; }
+}
 
 .link-list li {
   display: flex;
@@ -515,6 +625,7 @@ tr:hover td { background: var(--brand-soft) !important; }
   color: var(--ink-soft);
   font-size: .82rem;
   font-weight: 600;
+  text-decoration: none;
   transition: border-color .14s ease, color .14s ease, transform .14s ease;
 }
 .social-row a:hover { border-color: var(--pink); color: var(--teal); text-decoration: none; transform: translateY(-1px); }
@@ -530,6 +641,7 @@ tr:hover td { background: var(--brand-soft) !important; }
   background: var(--grad);
   color: #10063a;
   border: none;
+  text-decoration: none;
   cursor: pointer;
   box-shadow: 0 10px 22px -10px rgba(139, 109, 240, .55);
   transition: transform .14s ease, box-shadow .14s ease, opacity .14s ease;
@@ -587,20 +699,44 @@ tr:hover td { background: var(--brand-soft) !important; }
 }
 
 .malla-col-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: .4rem;
+  padding: 0 .1rem .4rem;
+  border-bottom: 2px solid var(--line);
+  margin-bottom: .1rem;
+}
+
+.malla-col-title {
   font-size: .68rem;
   font-weight: 700;
   color: var(--ink-faint);
   text-transform: uppercase;
   letter-spacing: .05em;
-  padding: 0 .1rem .4rem;
-  border-bottom: 2px solid var(--line);
-  margin-bottom: .1rem;
   display: flex;
   flex-direction: column;
   gap: .1rem;
 }
 
-.malla-col-head span { color: var(--teal); font-size: .72rem; }
+.malla-col-title span { color: var(--teal); font-size: .72rem; }
+
+.malla-col-toggle {
+  font: inherit;
+  font-size: .6rem;
+  font-weight: 700;
+  color: var(--ink-faint);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .18rem .5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color .14s ease, color .14s ease;
+}
+.malla-col-toggle:hover { border-color: var(--violet); color: var(--ink); }
+.malla-col-toggle.is-all { border-color: var(--accent); color: var(--teal); }
 
 .materia-card {
   background: var(--bg-alt);
@@ -610,6 +746,16 @@ tr:hover td { background: var(--brand-soft) !important; }
   cursor: pointer;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, opacity .15s ease;
   outline: none;
+}
+
+.materia-card .mc-code {
+  display: block;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: .1rem;
 }
 
 .materia-card .mc-sigla {
@@ -628,8 +774,8 @@ tr:hover td { background: var(--brand-soft) !important; }
   margin-top: .1rem;
 }
 
-.materia-card.tipo-electiva { border-style: dashed; background: rgba(255,255,255,.03); }
-.materia-card.tipo-electiva .mc-sigla { color: var(--violet); }
+.materia-card.tipo-electiva { border-style: dashed; background: rgba(255,255,255,.03); cursor: default; }
+.materia-card.tipo-electiva .mc-code { color: var(--violet); }
 .materia-card.tipo-final { border-color: var(--teal); background: var(--ok-soft); }
 
 .materia-card:hover, .materia-card:focus-visible {
@@ -637,36 +783,160 @@ tr:hover td { background: var(--brand-soft) !important; }
   box-shadow: var(--shadow-sm);
 }
 
-/* estados de resaltado — se controlan con JS agregando .has-selection al mapa */
-.malla.has-selection .materia-card { opacity: .3; }
-
-.malla.has-selection .materia-card.hl-self {
-  opacity: 1;
-  border-color: var(--violet);
-  background: var(--brand-soft);
-  box-shadow: 0 0 0 3px rgba(139,109,240,.2);
-}
-.malla.has-selection .materia-card.hl-self .mc-sigla { color: var(--violet); }
-
-.malla.has-selection .materia-card.hl-prereq {
-  opacity: 1;
-  border-color: var(--teal);
+/* estados del mapa - los agrega assets/js/main.js */
+.materia-card.is-approved {
+  border-color: var(--accent);
   background: var(--accent-soft);
 }
-.malla.has-selection .materia-card.hl-prereq .mc-sigla { color: var(--teal); }
+.materia-card.is-approved .mc-sigla { color: var(--teal); }
 
-.malla.has-selection .materia-card.hl-dependent {
+.malla.has-selection .materia-card.can-take {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  box-shadow: 0 0 0 3px rgba(139, 109, 240, .18);
+}
+.malla.has-selection .materia-card.can-take .mc-sigla { color: var(--violet); }
+
+.malla.has-selection .materia-card.locked { opacity: .4; }
+
+.materia-card.hl-hovered {
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(139, 109, 240, .16);
+}
+.materia-card.hl-dependent {
   opacity: 1;
-  border-color: var(--pink);
+  border-color: var(--coral);
   background: var(--coral-soft);
 }
-.malla.has-selection .materia-card.hl-dependent .mc-sigla { color: var(--pink); }
+.materia-card.hl-dependent .mc-sigla { color: var(--pink); }
+
+.materia-card.hl-missing {
+  opacity: 1;
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+.materia-card.hl-missing .mc-sigla { color: var(--amber); }
+
+/* si la correlativa resaltada ya está aprobada, no le tapamos el verde: solo un aro ámbar */
+.materia-card.is-approved.hl-missing {
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 3px rgba(242, 177, 52, .4);
+}
+.materia-card.is-approved.hl-missing .mc-sigla { color: var(--teal); }
+
+/* ".can-take" está definido con más especificidad (bajo .malla.has-selection) que
+   .hl-missing / .hl-dependent, así que sin esto el resaltado no se veía en esas tarjetas. */
+.malla.has-selection .materia-card.can-take.hl-missing {
+  box-shadow: 0 0 0 3px rgba(242, 177, 52, .45);
+}
+.malla.has-selection .materia-card.can-take.hl-dependent {
+  box-shadow: 0 0 0 3px rgba(236, 79, 176, .35);
+}
+
+/* idem: ".locked" sólo baja la opacidad, pero con más especificidad que el resaltado */
+.malla.has-selection .materia-card.locked.hl-missing,
+.malla.has-selection .materia-card.locked.hl-dependent {
+  opacity: 1;
+}
+
+/* ---------- barras de filtro / herramientas ---------- */
+
+.malla-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: .3rem 0 1rem;
+  min-height: 2.1rem;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.4rem;
+  margin: 1rem 0 1.2rem;
+}
+.filter-bar label {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.filter-bar select {
+  font: inherit;
+  font-size: .85rem;
+  color: var(--ink);
+  background: var(--bg-alt-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: .4rem .6rem;
+}
+
+.filter-count { font-size: .8rem; color: var(--ink-faint); }
+
+.btn-ghost {
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .4rem .95rem;
+  cursor: pointer;
+  transition: border-color .14s ease, color .14s ease;
+}
+.btn-ghost:hover { border-color: var(--pink); color: var(--ink); }
+
+/* ---------- novedades ---------- */
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.text-link { font-size: .85rem; font-weight: 600; white-space: nowrap; }
+
+.novedades-list { display: grid; gap: .9rem; }
+
+.novedad {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1rem;
+  padding: 1.05rem 1.3rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+.novedad time {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  padding-top: .1rem;
+}
+.novedad-body h3 {
+  margin: 0 0 .3rem;
+  color: var(--teal);
+  font-size: 1rem;
+  background: none;
+  -webkit-text-fill-color: var(--teal);
+}
+.novedad-body p { margin: 0; font-size: .88rem; }
+.novedad-body .tag { color: #fff; -webkit-text-fill-color: #fff; transform: translateY(-1px); }
+
+@media (max-width: 620px) {
+  .novedad { grid-template-columns: 1fr; gap: .35rem; }
+}
 
 /* Mobile */
 @media (max-width: 880px) {
   .sidebar { display: none; }
   .sidebar.open {
-    display: block;
+    display: flex;
     position: fixed;
     inset: 0 20% 0 0;
     z-index: 50;
@@ -679,4 +949,110 @@ tr:hover td { background: var(--brand-soft) !important; }
   .hero { padding: 2rem 1.5rem; }
   .hero h1 { font-size: 1.6rem; }
   .malla-col { width: 148px; }
+}
+
+/* ---------- calendario anual (calendario.html) ---------- */
+
+.cal-year {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.1rem;
+  margin: 0 0 1rem;
+}
+
+.cal-month {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem;
+}
+
+.cal-month-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: .92rem;
+  color: var(--ink);
+  text-transform: capitalize;
+  margin-bottom: .7rem;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.cal-dow {
+  text-align: center;
+  font-size: .6rem;
+  font-weight: 700;
+  color: var(--ink-faint);
+  padding-bottom: .3rem;
+}
+
+.cal-day {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .72rem;
+  color: var(--ink-soft);
+  border-radius: 6px;
+}
+
+.cal-day.is-empty { visibility: hidden; }
+
+.cal-day.has-event {
+  font-weight: 700;
+  cursor: default;
+}
+
+.cal-day.cat-hito { background: var(--brand-soft); color: var(--violet); }
+.cal-day.cat-administrativo { background: var(--amber-soft); color: var(--amber); }
+.cal-day.cat-examenes { background: var(--danger-soft); color: var(--danger); }
+.cal-day.cat-receso { background: var(--accent-soft); color: var(--teal); }
+.cal-day.cat-feriado { background: var(--coral-soft); color: var(--pink); }
+
+/* domingo: no se cursa. Sólo se ve si ese día no tiene ya un evento coloreado. */
+.cal-day.is-sunday:not(.has-event) {
+  color: #5a577e;
+}
+
+/* tooltip 100% CSS: el texto sale de data-tip */
+.cal-day.has-event::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 200px;
+  background: var(--bg-alt-2);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: .45rem .65rem;
+  font-size: .7rem;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: normal;
+  text-align: left;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .12s ease;
+  z-index: 30;
+}
+
+.cal-day.has-event:hover::after,
+.cal-day.has-event:focus-visible::after {
+  opacity: 1;
+}
+
+.cal-day.has-event:focus-visible { outline: 2px solid var(--violet); outline-offset: 1px; }
+
+@media (max-width: 620px) {
+  .cal-year { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .8rem; }
+  .cal-month { padding: .8rem; }
 }

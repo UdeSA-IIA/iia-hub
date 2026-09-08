@@ -1,0 +1,9 @@
+# Build de Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependencias locales para la vista previa (ver README)
+vendor/
+.bundle/
+Gemfile.lock

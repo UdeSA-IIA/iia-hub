@@ -7,22 +7,30 @@
 
   <div class="nav-group">
     <div class="nav-group-label">General</div>
-    <a class="nav-link{% if p == '/' or p == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}"><span class="ic">🏠</span>Inicio</a>
-    <a class="nav-link{% if p == '/novedades.html' %} active{% endif %}" href="{{ '/novedades.html' | relative_url }}"><span class="ic">📣</span>Novedades</a>
-    <a class="nav-link{% if p == '/faq.html' %} active{% endif %}" href="{{ '/faq.html' | relative_url }}"><span class="ic">❓</span>Preguntas frecuentes</a>
+    <a class="nav-link{% if p == '/' or p == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}"><span class="ic ms" aria-hidden="true">home</span>Inicio</a>
+    <a class="nav-link{% if p == '/novedades.html' %} active{% endif %}" href="{{ '/novedades.html' | relative_url }}"><span class="ic ms" aria-hidden="true">campaign</span>Novedades</a>
+    <a class="nav-link{% if p == '/faq.html' %} active{% endif %}" href="{{ '/faq.html' | relative_url }}"><span class="ic ms" aria-hidden="true">help</span>Preguntas frecuentes</a>
   </div>
 
   <div class="nav-group">
     <div class="nav-group-label">Cursada</div>
-    <a class="nav-link{% if p == '/plan-de-estudios.html' %} active{% endif %}" href="{{ '/plan-de-estudios.html' | relative_url }}"><span class="ic">📚</span>Plan de estudios</a>
-    <a class="nav-link{% if p == '/recursada.html' %} active{% endif %}" href="{{ '/recursada.html' | relative_url }}"><span class="ic">🔁</span>Si recursás una materia</a>
-    <a class="nav-link{% if p == '/calendario.html' %} active{% endif %}" href="{{ '/calendario.html' | relative_url }}"><span class="ic">📅</span>Calendario académico</a>
-    <a class="nav-link{% if p == '/pps.html' %} active{% endif %}" href="{{ '/pps.html' | relative_url }}"><span class="ic">🧑‍💻</span>PPS</a>
-    <a class="nav-link{% if p == '/intercambios.html' %} active{% endif %}" href="{{ '/intercambios.html' | relative_url }}"><span class="ic">🌍</span>Intercambios</a>
+    <a class="nav-link{% if p == '/plan-de-estudios.html' %} active{% endif %}" href="{{ '/plan-de-estudios.html' | relative_url }}"><span class="ic ms" aria-hidden="true">menu_book</span>Plan de estudios</a>
+    <a class="nav-link{% if p == '/recursada.html' %} active{% endif %}" href="{{ '/recursada.html' | relative_url }}"><span class="ic ms" aria-hidden="true">sync</span>Si recursás una materia</a>
+    <a class="nav-link{% if p == '/calendario.html' %} active{% endif %}" href="{{ '/calendario.html' | relative_url }}"><span class="ic ms" aria-hidden="true">calendar_month</span>Calendario académico</a>
+    <a class="nav-link{% if p == '/pps.html' %} active{% endif %}" href="{{ '/pps.html' | relative_url }}"><span class="ic ms" aria-hidden="true">work</span>PPS</a>
+    <a class="nav-link{% if p == '/trabajo-de-graduacion.html' %} active{% endif %}" href="{{ '/trabajo-de-graduacion.html' | relative_url }}"><span class="ic ms" aria-hidden="true">school</span>Trabajo de Graduación</a>
+    <a class="nav-link{% if p == '/intercambios.html' %} active{% endif %}" href="{{ '/intercambios.html' | relative_url }}"><span class="ic ms" aria-hidden="true">public</span>Intercambios</a>
   </div>
 
   <div class="nav-group">
     <div class="nav-group-label">Comunidad</div>
-    <a class="nav-link{% if p == '/recursos.html' %} active{% endif %}" href="{{ '/recursos.html' | relative_url }}"><span class="ic">🧭</span>Recursos útiles</a>
+    <a class="nav-link{% if p == '/recursos.html' %} active{% endif %}" href="{{ '/recursos.html' | relative_url }}"><span class="ic ms" aria-hidden="true">explore</span>Recursos útiles</a>
+  </div>
+
+  <div class="sidebar-social">
+    <a href="https://instagram.com/ingenieria.udesa" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://youtube.com/@ingenieriaudesa" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/company/ingenieria-udesa" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://tiktok.com/@ingenieria.udesa" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
   </div>
 </nav>

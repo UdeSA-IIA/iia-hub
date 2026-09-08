@@ -1,0 +1,9 @@
+---
+layout: calendario
+title: Calendario académico
+eyebrow: Cursada
+description: Fechas clave del año académico 2026, según el Calendario Académico oficial de UdeSA.
+permalink: /calendario.html
+---
+
+> Fechas tomadas del **Calendario Académico 2026** oficial de UdeSA.
