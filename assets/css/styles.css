@@ -185,17 +185,8 @@ code {
 .sidebar-brand .mark {
   width: 38px;
   height: 38px;
-  border-radius: 11px;
-  background: var(--grad);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #10063a;
-  font-weight: 700;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: .9rem;
+  object-fit: contain;
   flex-shrink: 0;
-  box-shadow: 0 6px 14px -6px rgba(139, 109, 240, .55);
 }
 
 .sidebar-brand .name {

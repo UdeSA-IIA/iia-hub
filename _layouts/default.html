@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/imgs/favicon-32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/imgs/favicon-16.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/imgs/apple-touch-icon.png' | relative_url }}">
 </head>
 <body>
   <div class="shell">
@@ -19,7 +21,7 @@
     <div class="main">
       <header class="topbar">
         <div class="sidebar-brand">
-          <div class="mark">IA</div>
+          <img class="mark" src="{{ '/assets/imgs/logo_sin_letras.png' | relative_url }}" alt="Escuela de Ingeniería">
           <div class="name">IIA Hub<small>Ing. en Inteligencia Artificial</small></div>
         </div>
         <button class="menu-btn" aria-label="Abrir menú"><span class="ms" aria-hidden="true">menu</span></button>
