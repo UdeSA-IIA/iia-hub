@@ -3,11 +3,11 @@ layout: default
 ---
 {% comment %}
   Estructura y tablas de la página "Si recursás una materia".
-  El texto editable (la regla clave de arriba) vive en recursada.md.
-  Los datos vienen de _data/incompatibilidades.yml.
+  El texto editable vive en _data/recursada.json.
+  Los datos vienen de _data/incompatibilidades.json.
 {% endcomment %}
 
-{{ content }}
+<blockquote>{{ site.data.recursada.regla_clave | markdownify }}</blockquote>
 
 <div class="legend">
   <span><i class="dot danger"></i> Incompatibilidad total - ninguna combinación de grupos funciona</span>

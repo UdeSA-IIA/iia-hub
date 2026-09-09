@@ -3,18 +3,17 @@ layout: default
 ---
 {% comment %}
   Estructura y tablas de la página "Plan de estudios".
-  El texto editable (la nota de arriba) vive en plan-de-estudios.md.
-  Los datos vienen de _data/materias.yml y _data/optativas.yml.
+  El texto editable vive en _data/plan-de-estudios.json.
+  Los datos vienen de _data/materias.json y _data/optativas.json.
 {% endcomment %}
 
-{{ content }}
-
+{% assign pd = site.data["plan-de-estudios"] %}
 {% assign materias = site.data.materias %}
 {% assign anios = materias | map: "anio" | uniq | sort %}
 
 <div class="section">
-  <h2>Mapa de correlativas</h2>
-  <p>Clickeá tus materias aprobadas para ver qué materias puedes cursar.</p>
+  <h2>{{ pd.mapa_titulo }}</h2>
+  <p>{{ pd.mapa_texto }}</p>
 
   <div class="legend">
     <span><i class="dot" style="background:var(--accent);"></i> Aprobada (elegida por vos)</span>
@@ -62,9 +61,8 @@ layout: default
 </div>
 
 <div class="section">
-  <h2>Optativas</h2>
-  <p>Materias optativas pre-aprobadas por la carrera. Elegís entre estas para completar los
-  slots de "Optativa I" a "VI" del plan.</p>
+  <h2>{{ pd.optativas_titulo }}</h2>
+  <p>{{ pd.optativas_texto }}</p>
 
   {% comment %}
     Primero las de área "Ingeniería", después el resto. Dentro de cada grupo, ordenadas
@@ -166,11 +164,11 @@ layout: default
 </div>
 
 <div class="section">
-  <h2>¿Vas a recursar alguna materia?</h2>
-  <p>Antes de armar tu cursada, revisá qué combinaciones de materias tienen problemas de superposición horaria entre grupos.</p>
+  <h2>{{ pd.recursar_titulo }}</h2>
+  <p>{{ pd.recursar_texto }}</p>
   <a class="tile" href="{{ '/recursada.html' | relative_url }}" style="max-width:360px;">
     <span class="ic ms" aria-hidden="true">sync</span>
-    <h3>Recomendaciones para recursantes</h3>
-    <p>Incompatibilidades de horario conocidas.</p>
+    <h3>{{ pd.recursar_tarjeta_titulo }}</h3>
+    <p>{{ pd.recursar_tarjeta_texto }}</p>
   </a>
 </div>

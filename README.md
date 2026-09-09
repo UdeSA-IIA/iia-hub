@@ -10,55 +10,82 @@ Es un sitio estático hecho con **Jekyll**, pensado para publicarse gratis con *
 iia-hub/
 ├── _config.yml                    # configuración del sitio (título, etc)
 ├── _layouts/
-│   ├── default.html               # plantilla base (sidebar + header + footer)
-│   ├── home.html                  # portada: hero + tiles + últimas novedades
+│   ├── default.html               # plantilla base (sidebar + header + footer) - estructura
+│   ├── home.html                  # portada
 │   ├── novedades.html             # lista de novedades
+│   ├── faq.html                   # acordeón de preguntas frecuentes
+│   ├── pps.html
+│   ├── intercambios.html
+│   ├── recursos.html
+│   ├── trabajo-de-graduacion.html
 │   ├── plan-de-estudios.html      # arma el mapa de correlativas y las tablas del plan
 │   └── recursada.html             # arma la tabla de incompatibilidades
 ├── _includes/nav.html             # menú de navegación (un solo lugar para editarlo)
-├── _data/
-│   ├── home.yml                   # textos y tiles de la portada
-│   ├── novedades.yml              # entradas de la página Novedades
-│   ├── materias.yml               # plan de estudios: materias, códigos, correlativas
-│   ├── optativas.yml              # listado de materias optativas pre-aprobadas
-│   └── incompatibilidades.yml     # incompatibilidades de horario para recursantes
+├── _data/                         # todo el contenido del sitio, en JSON
+│   ├── home.json                  # textos y tiles de la portada
+│   ├── novedades.json             # entradas de Novedades + el cartel de abajo
+│   ├── faq.json                   # secciones y preguntas/respuestas
+│   ├── pps.json
+│   ├── intercambios.json
+│   ├── recursos.json
+│   ├── trabajo-de-graduacion.json
+│   ├── plan-de-estudios.json      # sólo los textos de esa página (el resto es Liquid)
+│   ├── recursada.json
+│   ├── calendario.json            # textos + "otras fechas" sin día puntual
+│   ├── calendario_eventos.json    # eventos con fecha, para la vista de calendario
+│   ├── materias.json              # plan de estudios: materias, códigos, correlativas
+│   ├── optativas.json             # listado de materias optativas pre-aprobadas
+│   └── incompatibilidades.json    # incompatibilidades de horario para recursantes
 ├── assets/css/styles.css
 ├── assets/js/main.js
-├── index.md                       # Inicio
-├── plan-de-estudios.md
-├── recursada.md
-├── calendario.md
-├── faq.md
-├── pps.md
-├── intercambios.md
-├── novedades.md
-└── recursos.md
+├── index.html                     # Inicio
+├── plan-de-estudios.html
+├── recursada.html
+├── calendario.html
+├── faq.html
+├── pps.html
+├── intercambios.html
+├── novedades.html
+├── recursos.html
+└── trabajo-de-graduacion.html
 ```
 
 ### Cómo se compila
 
-Cada página es un archivo **Markdown puro** (`.md`): sólo tiene un encabezado `---` (front
-matter, con `title` / `eyebrow` / `permalink` / `layout`) y después texto Markdown - sin HTML
-ni etiquetas Liquid en el cuerpo. Al publicar, **Jekyll convierte el Markdown a HTML** y lo
-inyecta dentro del `layout` que indica el front matter. No hay que generar nada a mano.
+El sitio separa **estructura** de **contenido**, y no mezcla formatos: la estructura vive
+entera en `.html` (`_layouts/`, `_includes/`), el contenido vive entero en `.json` (`_data/`).
+No hace falta entender HTML para cambiar un texto.
 
-Toda la parte visual vive fuera del contenido:
+- **Los `.html` de la raíz** (`pps.html`, `faq.html`, etc.) están vacíos: sólo tienen el
+  encabezado `---` (front matter) con `layout`, `title`, `eyebrow`, `description` y
+  `permalink`. No tienen contenido - son la "ficha" que le dice a Jekyll qué layout usar y en
+  qué URL publicarla.
+- **`_layouts/<página>.html`** tiene el HTML/Liquid de esa página: lee su `_data/<página>.json`
+  y arma el marcado (tarjetas, acordeones, tablas). Esto no se edita para cambiar texto, sólo
+  para cambiar el diseño.
+- **`_data/<página>.json`** tiene todo el texto de esa página: títulos, párrafos, listas,
+  tarjetas, preguntas y respuestas. Los strings pueden llevar sintaxis Markdown adentro
+  (`**negrita**`, `[link](url)`) - el layout los pasa por el filtro `markdownify` de Jekyll,
+  así que se siguen viendo como negrita/link aunque el archivo sea JSON.
+- **`_data/materias.json`**, **`optativas.json`**, **`incompatibilidades.json`** y
+  **`calendario_eventos.json`** son los datos "de verdad" (no textos sueltos, sino tablas
+  relacionadas entre sí) que alimentan el mapa de correlativas, los filtros de optativas y el
+  calendario coloreado.
+- Las etiquetas fijas de la interfaz (encabezados de tabla, la leyenda del mapa de
+  correlativas, el texto de botones como "Marcar todo") quedan escritas en el `_layouts/*.html`
+  correspondiente, porque están atadas 1 a 1 al JS/CSS de esa función - no son "contenido" que
+  se edite sin tocar también el comportamiento.
 
-| Dónde | Qué hay ahí |
-|-------|-------------|
-| `_layouts/*.html` | La estructura de cada tipo de página (sidebar, header, grillas, y los bucles que arman las tablas). |
-| `_data/*.yml` | Los datos: materias, optativas, incompatibilidades, y los tiles/textos de la portada. |
-| `assets/css/styles.css` | El estilo. Incluye una sección que da formato al HTML "desnudo" que sale del Markdown (títulos, listas, tablas y `> citas`, que se ven como recuadros). |
-
-- Un recuadro destacado en una página se escribe como cita Markdown: una o más líneas que
-  empiezan con `> `.
-- Las páginas **Plan de estudios** y **Si recursás una materia** usan un layout propio
-  (`_layouts/plan-de-estudios.html` y `_layouts/recursada.html`) que genera las tablas desde
-  `_data/`. El `.md` sólo tiene la nota introductoria.
-- La portada (`index.md`) usa `_layouts/home.html`; el hero y los seis tiles se editan en
-  `_data/home.yml`.
-
-Las tablas de **Plan de estudios** y **Si recursás una materia** se generan automáticamente a partir de los archivos en `_data/`. Para actualizarlas, alcanza con editar esos `.yml` - no hace falta tocar la página.
+| Querés cambiar... | Editá... |
+|---|---|
+| El texto de una página (párrafos, tarjetas, preguntas) | `_data/<página>.json` |
+| Las materias y correlativas | `_data/materias.json` |
+| Las optativas | `_data/optativas.json` |
+| Las incompatibilidades de recursada | `_data/incompatibilidades.json` |
+| Los eventos del calendario (fechas, categoría) | `_data/calendario_eventos.json` |
+| El diseño/maquetación de una página | `_layouts/<página>.html` |
+| El menú de navegación | `_includes/nav.html` |
+| Colores y estilo | `assets/css/styles.css` (variables en `:root`) |
 
 ## Cómo publicarlo en GitHub Pages (paso a paso)
 
@@ -94,19 +121,19 @@ Las tablas de **Plan de estudios** y **Si recursás una materia** se generan aut
 
 ## Cómo editar contenido sin tocar código
 
-- **Materias y correlativas**: editar `_data/materias.yml`.
-- **Optativas**: editar `_data/optativas.yml`.
-- **Incompatibilidades de recursada**: editar `_data/incompatibilidades.yml` (ver la skill `horarios-iia` para recalcularlas si cambia la programación de horarios).
-- **Texto de cualquier página**: abrir el `.md` correspondiente y editar el Markdown. Es sólo texto: párrafos, `## títulos`, listas con `-`, `[links](destino.html)`, tablas y `> recuadros`.
-- **Hero y tiles de la portada**: `_data/home.yml`.
-- **Menú de navegación**: `_includes/nav.html`.
-- **Colores y estilo**: `assets/css/styles.css` (las variables están arriba de todo, en `:root`).
+Abrí el `.json` de `_data/` que corresponda (ver la tabla de arriba) y editá los valores de
+texto - son pares `"clave": "valor"`, no hace falta saber programar. Para las incompatibilidades
+de recursada, ver también la skill `horarios-iia` si cambia la programación de horarios.
+
+Un detalle de formato: JSON no permite comas después del último elemento de una lista, y todo
+string va entre comillas dobles (`"así"`). Si al guardar el build falla, seguramente sea eso -
+cualquier validador de JSON online lo detecta al toque.
 
 ## Contenido pendiente
 
 Algunas respuestas del FAQ y algunas fechas del calendario todavía están marcadas como
-`_(a completar)_` porque no teníamos la info real al armar el sitio. Buscá esa marca para
-encontrar lo que falta cargar. Las novedades de `_data/novedades.yml` también son de ejemplo.
+`(a completar)` porque no teníamos la info real al armar el sitio. Buscá esa marca para
+encontrar lo que falta cargar. Las novedades de `_data/novedades.json` también son de ejemplo.
 
 ## Probarlo en tu computadora (opcional)
 

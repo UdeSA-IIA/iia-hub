@@ -1,0 +1,67 @@
+{
+  "secciones": [
+    {
+      "titulo": "Cursada y correlativas",
+      "preguntas": [
+        {
+          "pregunta": "¿Dónde veo las correlativas de cada materia?",
+          "respuesta": "En [Plan de estudios](plan-de-estudios.html) está el listado completo de materias con sus correlativas, organizadas por año y semestre."
+        },
+        {
+          "pregunta": "Estoy recursando una materia, ¿puedo cursarla junto a materias del otro semestre?",
+          "respuesta": "Sí, siempre y cuando no se superpongan sus horarios. Podés revisar que materias se superponen [acá](recursada.html)."
+        },
+        {
+          "pregunta": "¿Cuántas materias puedo recursar por semestre?",
+          "respuesta": "_(A completar.)_ El borrador original menciona una restricción (\"si recursás, no podés volver a hacer 5 materias\") pero no quedó claro el detalle exacto. Confirmar con la carrera y reemplazar este texto."
+        },
+        {
+          "pregunta": "Este es mi primer semestre en la carrera, ¿debo inscribirme en las materias?",
+          "respuesta": "Si este es tu primer semestre de primer año, la Oficina de Alumnos te inscribirá automáticamente en las materias que deberás cursar. Recién a partir del segundo semestre de primer año deberás inscribirte en las materias. No te preocupes, te explicarán cómo hacerlo."
+        },
+        {
+          "pregunta": "¿Qué tengo que priorizar si no vengo al día con las materias?",
+          "respuesta": "Te recomendamos que planifiques tus próximos semestres (no sólo el próximo semestre a cursar). Para esto, deberás tener en cuenta las correlativas de cada materia. Podés revisar el [Plan de estudios](plan-de-estudios.html) para ver las correlativas de cada materia."
+        },
+        {
+          "pregunta": "Si quiero adelantar materias o ponerme al día, ¿puedo cursar más de 4 materias por semestre?",
+          "respuesta": "De manera excepcional, con la respectiva autorización de la carrera, respetando las correlatividades y cumpliendo con los requisitos, es posible cursar 5 materias. No pueden cursarse más de 5 materias en simultáneo.\n\nEn caso de cumplir con los requisitos, deberás contactarte con la carrera para solicitar la autorización correspondiente. Es importante que indiques cuáles serían las materias a cursar. Si lo necesitás, el equipo de la carrera puede ayudarte a decidir cuáles serían las materias más convenientes para cursar."
+        },
+        {
+          "pregunta": "¿Qué puedo hacer si estoy adelantado en las materias y el Plan de estudios no se adapta a lo que tengo que cursar?",
+          "respuesta": "Te recomendamos que planifiques tus próximos semestres (no sólo el próximo semestre a cursar). Para esto, deberás tener en cuenta las correlativas de cada materia. Podés revisar el [Plan de estudios](plan-de-estudios.html) para ver las correlativas de cada materia.\n\nSe puede aprovechar para cursar materias del ciclo de fundamentos y una vez aprobadas todas ellas se puede empezar con materias optativas."
+        },
+        {
+          "pregunta": "¿Cuándo puedo cursar materias optativas?",
+          "respuesta": "De acuerdo al Plan de estudios, las materias optativas se cursan a partir del 4to año. Sin embargo, si estás en 3er año y no tenés ninguna otra materia para cursar (porque estás adelantado, por ejemplo) podés contactarte con el equipo de la carrera para que te autoricen a cursar una materia optativa."
+        }
+      ]
+    },
+    {
+      "titulo": "PPS e intercambios",
+      "preguntas": [
+        {
+          "pregunta": "¿Cuándo puedo empezar la PPS?",
+          "respuesta": "_(A completar.)_ Ver [información sobre PPS](pps.html)."
+        },
+        {
+          "pregunta": "¿Qué requisitos necesito para un intercambio?",
+          "respuesta": "Promedio mínimo 6, no tener sanciones, haber terminado tercer año, y que el semestre de intercambio no sea el último de tu carrera. Más detalle en [Intercambios](intercambios.html)."
+        }
+      ]
+    },
+    {
+      "titulo": "Otros",
+      "preguntas": [
+        {
+          "pregunta": "¿Cómo me entero de novedades de la carrera?",
+          "respuesta": "En la página de [Novedades](novedades.html) vas a encontrar comunicados y anuncios importantes."
+        },
+        {
+          "pregunta": "Tengo una duda que no está acá, ¿a quién le pregunto?",
+          "respuesta": "Mirá [Recursos útiles](recursos.html) para contactos de Orientación al Estudiante, Alumnos y el equipo de la carrera."
+        }
+      ]
+    }
+  ]
+}

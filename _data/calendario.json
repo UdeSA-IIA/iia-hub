@@ -1,0 +1,26 @@
+{
+  "intro": "Fechas tomadas del **Calendario Académico 2026** oficial de UdeSA.",
+  "vista_titulo": "Vista de calendario",
+  "vista_texto": "Pasá el mouse (o tocá en el celular) sobre un día coloreado para ver qué significa.",
+  "otras_fechas_titulo": "Otras fechas importantes de la carrera",
+  "fuente_texto": "**Fuente original:** [Calendario Académico 2026 (PDF, sitio de UdeSA)](https://images.udesa.edu.ar/sites/default/files/2026-02/CALENDARIO%20ACADEMICO%202026.pdf). Si algún estudiante quiere ver el calendario en su formato original, puede abrirlo desde acá.",
+  "otras_fechas": [
+    {
+      "evento": "AI Fest",
+      "fecha": null,
+      "notas": "Evento anual de la carrera"
+    },
+    {
+      "evento": "Inscripción a intercambios",
+      "fecha": null,
+      "notas": "Ver requisitos en Intercambios",
+      "link": "/intercambios.html"
+    },
+    {
+      "evento": "Inscripción a PPS",
+      "fecha": null,
+      "notas": "Ver PPS",
+      "link": "/pps.html"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "secciones": [
+    {
+      "titulo": "Contactos y oficinas",
+      "tarjetas": [
+        { "icono": "groups", "color": "c-amber", "titulo": "Equipo Ing. en IA", "descripcion": "Roberto Bunge (Director)<br>Mariano Beiró (Co-Director)<br>Gastón Castro (Coordinador Académico)" },
+        { "icono": "mail", "color": "c-accent", "titulo": "Mail Ingeniería", "url": "mailto:ingenieria@udesa.edu.ar", "descripcion": "`ingenieria@udesa.edu.ar` - consultas particulares de la Escuela." },
+        { "icono": "cast_for_education", "color": "c-brand", "titulo": "Cuerpo docente", "url": "https://udesa.edu.ar/departamento-de-ingenieria/ingenieria-en-inteligencia-artificial/cuerpo-docente", "descripcion": "Listado de profesores/as de la carrera." },
+        { "icono": "assignment", "color": "c-coral", "titulo": "Oficina de Alumnos de Grado", "url": "https://udesa.edu.ar/oficina-de-alumnos-de-grado", "descripcion": "`alumnos@udesa.edu.ar` - inscripciones, cambio de comisiones, bajas, fechas de examen." },
+        { "icono": "favorite", "color": "c-accent", "titulo": "Orientación al alumno", "url": "https://udesa.edu.ar/orientacion-al-alumno", "descripcion": "`orientacionalumno@udesa.edu.ar` ·<br>11 6571 9081 - metodología de estudio, dudas vocacionales, situaciones personales." },
+        { "icono": "local_library", "color": "c-amber", "titulo": "Biblioteca Max von Buch", "url": "https://udesa.edu.ar/biblioteca", "descripcion": "Catálogo, salas de estudio y bases de datos" },
+        { "icono": "map", "color": "c-brand", "titulo": "Mapa del campus", "url": "https://www.udesa.edu.ar/sites/default/files/2022-07/2021-udesa-mapa-campus.pdf", "descripcion": "PDF oficial de UdeSA." }
+      ]
+    },
+    {
+      "titulo": "Documentos y reglamentos",
+      "tarjetas": [
+        { "icono": "gavel", "color": "c-coral", "titulo": "Políticas y Procedimientos", "url": "https://udesa.edu.ar/oficina-de-alumnos-de-grado", "descripcion": "El \"Blue Book\", el Régimen de Alumnos de Grado y el Código de Ética se descargan desde la Oficina de Alumnos de Grado." }
+      ]
+    },
+    {
+      "titulo": "Programas y oportunidades",
+      "tarjetas": [
+        { "icono": "science", "color": "c-accent", "titulo": "Asistente de investigación", "descripcion": "Los investigadores de la Escuela de Ingeniería abren oportunidades de investigación para estudiantes que quieran sumarse a sus proyectos." },
+        { "icono": "cast_for_education", "color": "c-amber", "titulo": "Iniciación a la Docencia", "descripcion": "Podés sumarte a ayudar con tareas de docencia en alguna materia que ya hayas aprobado." }
+      ]
+    },
+    {
+      "titulo": "Clubes estudiantiles",
+      "tarjetas": [
+        { "icono": "smart_toy", "color": "c-brand", "titulo": "AI & Robotics Club (AIR)", "descripcion": "Charlas, talleres y proyectos de IA y robótica." },
+        { "icono": "biotech", "color": "c-coral", "titulo": "Club de Biomedicina e IA Aplicada (BIAA)", "descripcion": "Charlas, talleres y proyectos de IA aplicada a la biomedicina." },
+        { "icono": "diversity_3", "color": "c-accent", "titulo": "Otras organizaciones", "url": "https://udesa.edu.ar/organizaciones-estudiantiles", "descripcion": "Página oficial con el resto de clubes de la universidad (Club de Emprendedores, Club de Finanzas, Grupo de Consultoría, etc.)." }
+      ]
+    }
+  ]
+}

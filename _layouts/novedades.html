@@ -2,13 +2,12 @@
 layout: default
 ---
 {% comment %}
-  Lista de novedades. El texto editable de arriba vive en novedades.md.
-  Las entradas vienen de _data/novedades.yml (se ordenan por fecha, la más nueva primero).
+  Estructura de la página "Novedades". Todo el contenido (entradas y el texto del
+  cartel de abajo) vive en _data/novedades.json.
 {% endcomment %}
 
-{{ content }}
-
-{% assign novedades = site.data.novedades | sort: "fecha" | reverse %}
+{% assign nov = site.data.novedades %}
+{% assign novedades = nov.entradas | sort: "fecha" | reverse %}
 {% if novedades and novedades.size > 0 %}
 <div class="novedades-list full">
   {% for n in novedades %}
@@ -26,6 +25,5 @@ layout: default
 {% endif %}
 
 <div class="callout" style="margin-top:2.4rem;">
-  <p><strong>¿Querés compartir algo para comunicar?</strong> Si tenés una novedad, evento o
-  aviso que la comunidad de la carrera debería conocer, escribinos. <a>Completar formulario</a>.</p>
+  <p><strong>{{ nov.cta.titulo }}</strong> {{ nov.cta.texto }} <a href="{{ nov.cta.link_url }}">{{ nov.cta.link_texto }}</a>.</p>
 </div>

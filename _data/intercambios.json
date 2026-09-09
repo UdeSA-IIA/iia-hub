@@ -1,0 +1,27 @@
+{
+  "intro": "Los intercambios son gestionados por la **Oficina de Programas Internacionales (OPI)**. En el Campus Virtual vas a encontrar una sección específica creada por esta oficina con toda la información que necesitás:",
+  "tarjetas": [
+    {
+      "icono": "public",
+      "titulo": "Información sobre intercambios - Campus Virtual",
+      "url": "https://campusvirtual.udesa.edu.ar/course/view.php?id=18394",
+      "descripcion": "Toda la info oficial de OPI sobre el proceso de intercambio"
+    },
+    {
+      "icono": "forum",
+      "titulo": "Canales de contacto con OPI",
+      "url": "https://campusvirtual.udesa.edu.ar/course/view.php?id=18394&section=1",
+      "descripcion": "Cómo comunicarte con la oficina para consultas"
+    }
+  ],
+  "requisitos_titulo": "Requisitos",
+  "requisitos": [
+    "Promedio mínimo: **6**",
+    "No poseer ninguna sanción",
+    "Haber finalizado tercer año de la carrera",
+    "El semestre de intercambio no puede ser el último de la cursada"
+  ],
+  "tener_en_cuenta": "**Tené en cuenta:** en caso de realizar un intercambio, tu carrera podría extenderse un semestre más.",
+  "seleccionado_titulo": "Si quedaste seleccionado/a",
+  "seleccionado_texto": "Recomendamos comunicarte con el equipo de la carrera para evaluar posibilidades de materias a cursar en la universidad de destino y las equivalencias al regreso."
+}

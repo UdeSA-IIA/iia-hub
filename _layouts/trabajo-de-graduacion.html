@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% comment %}
+  Estructura de la página "Trabajo de Graduación".
+  Todo el contenido vive en _data/trabajo-de-graduacion.json.
+{% endcomment %}
+{% assign tg = site.data["trabajo-de-graduacion"] %}
+
+<p>{{ tg.intro }}</p>
+
+<h2>{{ tg.reglamento_titulo }}</h2>
+<ul>
+  <li><strong><a href="{{ tg.reglamento_link_url }}" target="_blank" rel="noopener">{{ tg.reglamento_link_titulo }}</a></strong>: {{ tg.reglamento_link_descripcion }}</li>
+</ul>
+<p>{{ tg.reglamento_pendiente | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
+
+<h2>{{ tg.trabajos_pasados_titulo }}</h2>
+<p>{{ tg.trabajos_pasados_texto | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
+
+<h2>{{ tg.contacto_titulo }}</h2>
+<p>{{ tg.contacto_texto | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>

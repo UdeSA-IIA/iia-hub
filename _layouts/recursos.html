@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% comment %}
+  Estructura de la página "Recursos útiles". Todo el contenido vive en _data/recursos.json.
+{% endcomment %}
+
+{% for sec in site.data.recursos.secciones %}
+<h2>{{ sec.titulo }}</h2>
+<div class="grid grid-3">
+  {% for t in sec.tarjetas %}
+  {% if t.url %}
+  <a class="tile {{ t.color }}" href="{{ t.url }}"{% unless t.url contains "mailto:" %} target="_blank" rel="noopener"{% endunless %}>
+    <span class="ic ms" aria-hidden="true">{{ t.icono }}</span>
+    <h3>{{ t.titulo }}</h3>
+    <p>{{ t.descripcion | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
+  </a>
+  {% else %}
+  <div class="tile {{ t.color }}">
+    <span class="ic ms" aria-hidden="true">{{ t.icono }}</span>
+    <h3>{{ t.titulo }}</h3>
+    <p>{{ t.descripcion | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endfor %}

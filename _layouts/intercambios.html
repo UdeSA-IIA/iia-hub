@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% comment %}
+  Estructura de la página "Intercambios". Todo el contenido vive en _data/intercambios.json.
+{% endcomment %}
+{% assign ic = site.data.intercambios %}
+
+<p>{{ ic.intro | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
+
+<div class="link-list cols-2">
+  {% for t in ic.tarjetas %}
+  <li>
+    <span class="ic ms" aria-hidden="true">{{ t.icono }}</span>
+    <div class="meta">
+      <strong><a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.titulo }}</a></strong>
+      <span>{{ t.descripcion }}</span>
+    </div>
+  </li>
+  {% endfor %}
+</div>
+
+<h2>{{ ic.requisitos_titulo }}</h2>
+<ul>
+  {% for r in ic.requisitos %}
+  <li>{{ r | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</li>
+  {% endfor %}
+</ul>
+
+<blockquote>{{ ic.tener_en_cuenta | markdownify }}</blockquote>
+
+<h2>{{ ic.seleccionado_titulo }}</h2>
+<p>{{ ic.seleccionado_texto }}</p>

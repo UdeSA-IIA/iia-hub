@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{% comment %}
+  Estructura de la página "PPS". Todo el contenido vive en _data/pps.json.
+{% endcomment %}
+{% assign p = site.data.pps %}
+
+<blockquote>{{ p.cita_reglamento | markdownify }}</blockquote>
+
+<h2>{{ p.que_es_titulo }}</h2>
+{% for parrafo in p.que_es_parrafos %}
+{{ parrafo | markdownify }}
+{% endfor %}
+
+<h2>{{ p.requisitos_titulo }}</h2>
+<p>{{ p.requisitos_intro }}</p>
+
+<div class="grid grid-2">
+  {% for tarjeta in p.requisitos_tarjetas %}
+  <div class="card">
+    <h3 class="h-pink">{{ tarjeta.titulo }}</h3>
+    <ul>
+      {% for item in tarjeta.items %}
+      <li>{{ item | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+<h2>{{ p.plan_trabajo_titulo }}</h2>
+<p>{{ p.plan_trabajo_intro }}</p>
+<ul>
+  {% for item in p.plan_trabajo_items %}
+  <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+<p>{{ p.plan_trabajo_cierre }}</p>
+
+<blockquote>{{ p.inscripcion_cita | markdownify }}</blockquote>
+
+<h2>{{ p.supervision_titulo }}</h2>
+<div class="grid grid-2">
+  {% for tarjeta in p.supervision_tarjetas %}
+  <div class="card">
+    <h3 class="h-pink">{{ tarjeta.titulo }}</h3>
+    <p>{{ tarjeta.texto }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<h2>{{ p.evaluacion_titulo }}</h2>
+<p>{{ p.evaluacion_intro }}</p>
+<ul>
+  {% for item in p.evaluacion_items %}
+  <li>{{ item | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</li>
+  {% endfor %}
+</ul>
+<p>{{ p.evaluacion_cierre | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
+
+<h2>{{ p.compromiso_titulo }}</h2>
+<p>{{ p.compromiso_texto }}</p>

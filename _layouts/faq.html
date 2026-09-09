@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% comment %}
+  Estructura de la página "Preguntas frecuentes". Todo el contenido
+  (secciones y preguntas/respuestas) vive en _data/faq.json.
+{% endcomment %}
+
+{% for sec in site.data.faq.secciones %}
+<h3 class="h-teal">{{ sec.titulo }}</h3>
+
+{% for p in sec.preguntas %}
+<details class="accordion-item">
+<summary>{{ p.pregunta }}</summary>
+<div class="body">{{ p.respuesta | markdownify }}</div>
+</details>
+{% endfor %}
+{% endfor %}

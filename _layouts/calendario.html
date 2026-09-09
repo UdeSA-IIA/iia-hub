@@ -2,19 +2,19 @@
 layout: default
 ---
 {% comment %}
-  Estructura de la página "Calendario académico".
-  El texto editable (la nota de arriba) vive en calendario.md.
-  La vista de calendario sale de _data/calendario_eventos.yml; "Otras fechas de la
-  carrera" (sin día puntual todavía) sale de _data/calendario.yml.
+  Estructura de la página "Calendario académico". El texto vive en
+  _data/calendario.json (junto con "otras_fechas"); la vista de calendario sale
+  de _data/calendario_eventos.json.
 {% endcomment %}
 
-{{ content }}
-
+{% assign cal = site.data.calendario %}
 {% assign cal_ev = site.data.calendario_eventos %}
 
+<blockquote>{{ cal.intro | markdownify }}</blockquote>
+
 <div class="section">
-  <h2>Vista de calendario</h2>
-  <p>Pasá el mouse (o tocá en el celular) sobre un día coloreado para ver qué significa.</p>
+  <h2>{{ cal.vista_titulo }}</h2>
+  <p>{{ cal.vista_texto }}</p>
 
   <div class="legend">
     {% for c in cal_ev.categorias %}
@@ -29,16 +29,15 @@ layout: default
 </div>
 
 <div class="section">
-  <h2>Otras fechas importantes de la carrera</h2>
-  <p>Estas no salen del calendario académico general de la universidad, sino de la
-  organización propia de Ingeniería en IA.</p>
+  <h2>{{ cal.otras_fechas_titulo }}</h2>
+
   <div class="table-wrap">
     <table>
       <thead>
         <tr><th>Evento</th><th>Fecha</th><th>Notas</th></tr>
       </thead>
       <tbody>
-        {% for of in site.data.calendario.otras_fechas %}
+        {% for of in cal.otras_fechas %}
         <tr>
           <td>{{ of.evento }}</td>
           <td>{% if of.fecha %}{{ of.fecha }}{% else %}<span style="color:var(--ink-faint);">a completar</span>{% endif %}</td>
@@ -50,6 +49,4 @@ layout: default
   </div>
 </div>
 
-<div class="callout">
-  <p><strong>Fuente original:</strong> <a href="https://images.udesa.edu.ar/sites/default/files/2026-02/CALENDARIO%20ACADEMICO%202026.pdf">Calendario Académico 2026 (PDF, sitio de UdeSA)</a>. Si algún estudiante quiere ver el calendario en su formato original, puede abrirlo desde acá.</p>
-</div>
+<div class="callout">{{ cal.fuente_texto | markdownify }}</div>
