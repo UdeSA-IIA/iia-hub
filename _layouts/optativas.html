@@ -1,0 +1,118 @@
+---
+layout: default
+---
+{% comment %}
+  Estructura de la página "Optativas" (subsección de Plan de estudios, en su propia URL
+  para no ocupar todo el espacio de esa página). Texto en _data/optativas-page.json,
+  datos en _data/optativas.json y _data/materias.json (para cruzar códigos).
+{% endcomment %}
+{% assign op = site.data["optativas-page"] %}
+{% assign materias = site.data.materias %}
+
+{{ op.intro | markdownify }}
+
+{% comment %}
+  Primero las de área "Ingeniería", después el resto. Dentro de cada grupo, ordenadas
+  por código; las que no tienen código propio (materias de otras carreras) quedan al
+  final de su grupo, ordenadas por nombre.
+{% endcomment %}
+{% comment %}
+  where_exp con "and" no anda en el Jekyll 3.x que usa GitHub Pages (github-pages gem),
+  así que se filtra en dos pasos encadenados en vez de una condición compuesta.
+{% endcomment %}
+{% assign optativas_ing = site.data.optativas | where_exp: "o", "o.area == 'Ingeniería'" %}
+{% assign optativas_resto = site.data.optativas | where_exp: "o", "o.area != 'Ingeniería'" %}
+{% assign ing_con_codigo = optativas_ing | where_exp: "o", "o.codigo != nil" | sort: "codigo" %}
+{% assign ing_sin_codigo = optativas_ing | where_exp: "o", "o.codigo == nil" | sort: "nombre" %}
+{% assign resto_con_codigo = optativas_resto | where_exp: "o", "o.codigo != nil" | sort: "codigo" %}
+{% assign resto_sin_codigo = optativas_resto | where_exp: "o", "o.codigo == nil" | sort: "nombre" %}
+{% assign optativas = ing_con_codigo | concat: ing_sin_codigo | concat: resto_con_codigo | concat: resto_sin_codigo %}
+{% assign areas = optativas | map: "area" | compact | uniq | sort %}
+{% assign orientaciones = optativas | map: "orientacion" | compact | uniq | sort %}
+
+<div class="filter-bar">
+  <label>Área
+    <select id="filtro-area">
+      <option value="">Todas</option>
+      {% for a in areas %}<option value="{{ a }}">{{ a }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Orientación
+    <select id="filtro-orientacion">
+      <option value="">Todas</option>
+      {% for o in orientaciones %}<option value="{{ o }}">{{ o }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>¿Cuándo se dicta?
+    <select id="filtro-semestre">
+      <option value="">Cualquiera</option>
+      <option value="primero">Solo primeros semestres</option>
+      <option value="segundo">Solo segundos semestres</option>
+      <option value="ambos">Ambos semestres</option>
+    </select>
+  </label>
+  <span id="optativas-count" class="filter-count"></span>
+</div>
+
+<div class="table-wrap" id="optativas-tabla">
+  <table>
+    <thead>
+      <tr><th>Materia</th><th>Código</th><th>Área</th><th>Orientación</th><th>Se dicta</th><th>Correlativas</th></tr>
+    </thead>
+    <tbody>
+      {% for o in optativas %}
+      <tr data-area="{{ o.area }}" data-orientacion="{{ o.orientacion }}" data-semestre="{{ o.semestre }}">
+        <td>
+          <strong>{{ o.nombre }}</strong>
+          {% if o.comentario %}<br><span style="color:var(--ink-faint); font-size:.8rem;">{{ o.comentario }}</span>{% endif %}
+        </td>
+        <td>{{ o.codigo | default: "-" }}</td>
+        <td>{{ o.area | default: "-" }}</td>
+        <td>{{ o.orientacion | default: "-" }}</td>
+        <td>
+          {% if o.semestre == "primero" %}1er semestre
+          {% elsif o.semestre == "segundo" %}2do semestre
+          {% elsif o.semestre == "ambos" %}Ambos
+          {% else %}<span style="color:var(--ink-faint);">a confirmar</span>
+          {% endif %}
+        </td>
+        <td>
+          {% if o.correlativas_texto %}
+            {% assign co_grupos = o.correlativas_texto | replace: ";", "," | replace: " ó ", " o " | split: "," %}
+            {% for co_grupo_raw in co_grupos %}
+              {% assign co_grupo = co_grupo_raw | strip %}
+              {% assign co_alts = co_grupo | split: " o " %}
+              {% assign co_texto = "" %}
+              {% for co_alt_raw in co_alts %}
+                {% assign co_alt = co_alt_raw | strip %}
+                {% assign co_clave = co_alt | replace: " 1", " I" | replace: " 2", " II" | replace: " 3", " III" %}
+                {% assign co_mat = materias | where: "nombre", co_clave | first %}
+                {% assign co_opt = site.data.optativas | where: "nombre", co_clave | first %}
+                {% if co_mat and co_mat.codigo and co_mat.codigo != "-" %}
+                  {% assign co_texto = co_texto | append: co_alt | append: " (" | append: co_mat.codigo | append: ")" %}
+                {% elsif co_opt and co_opt.codigo %}
+                  {% assign co_texto = co_texto | append: co_alt | append: " (" | append: co_opt.codigo | append: ")" %}
+                {% else %}
+                  {% assign co_texto = co_texto | append: co_alt %}
+                {% endif %}
+                {% unless forloop.last %}{% assign co_texto = co_texto | append: " o " %}{% endunless %}
+              {% endfor %}
+              {{ co_texto }}{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <a class="tile" href="{{ '/plan-de-estudios.html' | relative_url }}" style="max-width:360px;">
+    <span class="ic ms" aria-hidden="true">menu_book</span>
+    <h3>Volver a Plan de estudios</h3>
+    <p>Mapa de correlativas y el resto del plan.</p>
+  </a>
+</div>

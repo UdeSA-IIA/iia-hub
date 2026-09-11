@@ -1,0 +1,12 @@
+{
+  "secciones": [
+    {
+      "titulo": "Clubes estudiantiles",
+      "tarjetas": [
+        { "icono": "smart_toy", "color": "c-brand", "titulo": "AI & Robotics Club (AIR)", "descripcion": "Charlas, talleres y proyectos de IA y robótica." },
+        { "icono": "biotech", "color": "c-coral", "titulo": "Club de Biomedicina e IA Aplicada (BIAA)", "descripcion": "Charlas, talleres y proyectos de IA aplicada a la biomedicina." },
+        { "icono": "diversity_3", "color": "c-accent", "titulo": "Otras organizaciones", "url": "https://udesa.edu.ar/organizaciones-estudiantiles", "descripcion": "Página oficial con el resto de clubes de la universidad (Club de Emprendedores, Club de Finanzas, Grupo de Consultoría, etc.)." }
+      ]
+    }
+  ]
+}

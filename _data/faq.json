@@ -8,10 +8,6 @@
           "respuesta": "En [Plan de estudios](plan-de-estudios.html) está el listado completo de materias con sus correlativas, organizadas por año y semestre."
         },
         {
-          "pregunta": "Estoy recursando una materia, ¿puedo cursarla junto a materias del otro semestre?",
-          "respuesta": "Sí, siempre y cuando no se superpongan sus horarios. Podés revisar que materias se superponen [acá](recursada.html)."
-        },
-        {
           "pregunta": "¿Cuántas materias puedo recursar por semestre?",
           "respuesta": "_(A completar.)_ El borrador original menciona una restricción (\"si recursás, no podés volver a hacer 5 materias\") pero no quedó claro el detalle exacto. Confirmar con la carrera y reemplazar este texto."
         },

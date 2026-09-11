@@ -28,13 +28,6 @@
       "desc": "Todas las materias por año y semestre, con sus correlativas."
     },
     {
-      "icon": "sync",
-      "color": "c-coral",
-      "title": "Si recursás una materia",
-      "url": "/recursada.html",
-      "desc": "Qué combinaciones de horario funcionan y cuáles no."
-    },
-    {
       "icon": "calendar_month",
       "color": "c-accent",
       "title": "Calendario académico",
@@ -60,7 +53,7 @@
       "color": "c-brand",
       "title": "Recursos útiles",
       "url": "/recursos.html",
-      "desc": "Orientación al estudiante, contactos, reglamentos y clubes estudiantiles."
+      "desc": "Orientación al estudiante, contactos y reglamentos."
     }
   ]
 }

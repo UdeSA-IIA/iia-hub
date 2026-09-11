@@ -2,11 +2,15 @@
 layout: default
 ---
 {% comment %}
-  Estructura de la página "Recursos útiles". Todo el contenido vive en _data/recursos.json.
+  Layout genérico para páginas armadas con "secciones" de tarjetas (Recursos útiles,
+  Equipo de la carrera, Clubes estudiantiles). El contenido sale de _data/<archivo>.json,
+  donde <archivo> es el nombre del .html de esta página (sin extensión).
 {% endcomment %}
+{% assign clave = page.name | remove: ".html" %}
+{% assign datos = site.data[clave] %}
 
-{% for sec in site.data.recursos.secciones %}
-<h2>{{ sec.titulo }}</h2>
+{% for sec in datos.secciones %}
+{% unless datos.secciones.size == 1 %}<h2>{{ sec.titulo }}</h2>{% endunless %}
 <div class="grid grid-3">
   {% for t in sec.tarjetas %}
   {% if t.url %}

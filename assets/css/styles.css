@@ -772,7 +772,8 @@ tr:hover td { background: var(--brand-soft) !important; }
 
 .materia-card.tipo-electiva { border-style: dashed; background: rgba(255,255,255,.03); cursor: default; }
 .materia-card.tipo-electiva .mc-code { color: var(--violet); }
-.materia-card.tipo-final { border-color: var(--teal); background: var(--ok-soft); }
+.materia-card.tipo-fundamentos { border-style: dashed; background: rgba(255,255,255,.03); cursor: default; }
+.materia-card.tipo-fundamentos .mc-code { color: var(--ink-faint); }
 
 .materia-card:hover, .materia-card:focus-visible {
   border-color: var(--violet);

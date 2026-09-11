@@ -2,9 +2,7 @@
   "mapa_titulo": "Mapa de correlativas",
   "mapa_texto": "Clickeá tus materias aprobadas para ver qué materias puedes cursar.",
   "optativas_titulo": "Optativas",
-  "optativas_texto": "Materias optativas pre-aprobadas por la carrera. Elegís entre estas para completar los slots de \"Optativa I\" a \"VI\" del plan.",
-  "recursar_titulo": "¿Vas a recursar alguna materia?",
-  "recursar_texto": "Antes de armar tu cursada, revisá qué combinaciones de materias tienen problemas de superposición horaria entre grupos.",
-  "recursar_tarjeta_titulo": "Recomendaciones para recursantes",
-  "recursar_tarjeta_texto": "Incompatibilidades de horario conocidas."
+  "optativas_texto": "Las materias optativas pre-aprobadas por la carrera, con filtro por área, orientación y semestre, están en su propia página para no ocupar todo el espacio de acá.",
+  "optativas_tarjeta_titulo": "Ver optativas",
+  "optativas_tarjeta_texto": "Listado completo con filtros por área, orientación y semestre."
 }

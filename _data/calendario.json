@@ -9,18 +9,6 @@
       "evento": "AI Fest",
       "fecha": null,
       "notas": "Evento anual de la carrera"
-    },
-    {
-      "evento": "Inscripción a intercambios",
-      "fecha": null,
-      "notas": "Ver requisitos en Intercambios",
-      "link": "/intercambios.html"
-    },
-    {
-      "evento": "Inscripción a PPS",
-      "fecha": null,
-      "notas": "Ver PPS",
-      "link": "/pps.html"
     }
   ]
 }

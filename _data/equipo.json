@@ -1,0 +1,13 @@
+{
+  "secciones": [
+    {
+      "titulo": "Equipo de la carrera",
+      "tarjetas": [
+        { "icono": "person", "color": "c-brand", "titulo": "Roberto Bunge", "descripcion": "Director<br>_(mail a completar)_" },
+        { "icono": "person", "color": "c-coral", "titulo": "Mariano Beiró", "descripcion": "Co-Director<br>_(mail a completar)_" },
+        { "icono": "person", "color": "c-accent", "titulo": "Gastón Castro", "descripcion": "Coordinador Académico<br>_(mail a completar)_" },
+        { "icono": "cast_for_education", "color": "c-amber", "titulo": "Cuerpo docente", "url": "https://udesa.edu.ar/departamento-de-ingenieria/ingenieria-en-inteligencia-artificial/cuerpo-docente", "descripcion": "Listado completo de profesores/as de la carrera." }
+      ]
+    }
+  ]
+}
