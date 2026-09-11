@@ -772,8 +772,14 @@ tr:hover td { background: var(--brand-soft) !important; }
 
 .materia-card.tipo-electiva { border-style: dashed; background: rgba(255,255,255,.03); cursor: default; }
 .materia-card.tipo-electiva .mc-code { color: var(--violet); }
-.materia-card.tipo-fundamentos { border-style: dashed; background: rgba(255,255,255,.03); cursor: default; }
-.materia-card.tipo-fundamentos .mc-code { color: var(--ink-faint); }
+
+/* Ciclo de Fundamentos de la universidad (no son optativas de la carrera). Es un modificador
+   visual: se combina con el tipo real de la materia y no cambia si es clickeable o no. */
+.materia-card.es-fundamentos { border-style: dashed; background: rgba(255,255,255,.03); }
+.materia-card.es-fundamentos .mc-code { color: var(--ink-faint); }
+/* Las que además son un slot genérico (Electiva de Arte/Ciencias/Historia, sin código propio)
+   no tienen una materia concreta detrás, así que no son clickeables. */
+.materia-card.tipo-fundamentos { cursor: default; }
 
 .materia-card:hover, .materia-card:focus-visible {
   border-color: var(--violet);

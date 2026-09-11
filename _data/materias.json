@@ -5,9 +5,7 @@
     "codigo": "C050",
     "sigla": "AL",
     "nombre": "Álgebra Lineal",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 114,
     "tipo": "obligatoria"
   },
@@ -17,9 +15,7 @@
     "codigo": "C052",
     "sigla": "AM1",
     "nombre": "Análisis Matemático I",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 114,
     "tipo": "obligatoria"
   },
@@ -29,9 +25,7 @@
     "codigo": "I100",
     "sigla": "PC",
     "nombre": "Pensamiento Computacional",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 114,
     "tipo": "obligatoria"
   },
@@ -41,11 +35,10 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Electiva de Arte",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 86,
-    "tipo": "electiva"
+    "tipo": "electiva",
+    "fundamentos": true
   },
   {
     "anio": 1,
@@ -92,11 +85,10 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Electiva de Ciencias",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 86,
-    "tipo": "electiva"
+    "tipo": "electiva",
+    "fundamentos": true
   },
   {
     "anio": 2,
@@ -141,11 +133,10 @@
     "codigo": "E010",
     "sigla": "-",
     "nombre": "Economía I",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 86,
-    "tipo": "obligatoria"
+    "tipo": "obligatoria",
+    "fundamentos": true
   },
   {
     "anio": 2,
@@ -235,11 +226,10 @@
     "codigo": "H010",
     "sigla": "-",
     "nombre": "Electiva de Filosofía",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 86,
-    "tipo": "obligatoria"
+    "tipo": "obligatoria",
+    "fundamentos": true
   },
   {
     "anio": 3,
@@ -358,11 +348,10 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Electiva de Historia",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 86,
-    "tipo": "electiva"
+    "tipo": "electiva",
+    "fundamentos": true
   },
   {
     "anio": 4,
@@ -396,9 +385,7 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Optativa I",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 57,
     "tipo": "electiva"
   },
@@ -408,9 +395,7 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Optativa II",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 57,
     "tipo": "electiva"
   },
@@ -420,9 +405,7 @@
     "codigo": "H209",
     "sigla": "-",
     "nombre": "Escritura y Oratoria",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 114,
     "tipo": "obligatoria"
   },
@@ -432,9 +415,7 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Optativa III",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 57,
     "tipo": "electiva"
   },
@@ -444,9 +425,7 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Optativa IV",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 57,
     "tipo": "electiva"
   },
@@ -498,9 +477,7 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Optativa V",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 57,
     "tipo": "electiva"
   },
@@ -510,9 +487,7 @@
     "codigo": "-",
     "sigla": "-",
     "nombre": "Optativa VI",
-    "correlativas": [
-
-    ],
+    "correlativas": [],
     "carga_horaria": 57,
     "tipo": "electiva"
   },

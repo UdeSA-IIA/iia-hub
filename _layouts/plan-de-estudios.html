@@ -42,7 +42,7 @@ layout: default
         </div>
         {% for m in materias_sem %}
         {% if m.codigo != "-" %}
-        <div class="materia-card tipo-{{ m.tipo }}" data-code="{{ m.codigo }}" data-prereqs="{{ m.correlativas | join: ',' }}" tabindex="0" role="button" aria-pressed="false">
+        <div class="materia-card tipo-{{ m.tipo }}{% if m.fundamentos %} es-fundamentos{% endif %}" data-code="{{ m.codigo }}" data-prereqs="{{ m.correlativas | join: ',' }}" tabindex="0" role="button" aria-pressed="false">
           <span class="mc-code">{{ m.codigo }}</span>
           <span class="mc-sigla">{% if m.sigla and m.sigla != "-" %}{{ m.sigla }}{% else %}{{ m.codigo }}{% endif %}</span>
           <span class="mc-nombre">{{ m.nombre }}</span>
@@ -53,7 +53,7 @@ layout: default
           <span class="mc-nombre">{{ m.nombre }}</span>
         </div>
         {% else %}
-        <div class="materia-card tipo-fundamentos" data-code="" data-prereqs="">
+        <div class="materia-card tipo-fundamentos es-fundamentos" data-code="" data-prereqs="">
           <span class="mc-code">Fundamentos</span>
           <span class="mc-nombre">{{ m.nombre }}</span>
         </div>

@@ -139,8 +139,6 @@ cualquier validador de JSON online lo detecta al toque.
 Algunas respuestas del FAQ y algunas fechas del calendario todavía están marcadas como
 `(a completar)` porque no teníamos la info real al armar el sitio. Buscá esa marca para
 encontrar lo que falta cargar. Las novedades de `_data/novedades.json` también son de ejemplo.
-Los mails de Director/Co-Director/Coordinador en `_data/equipo.json` también están como
-`(mail a completar)`.
 
 ## Probarlo en tu computadora (opcional)
 
