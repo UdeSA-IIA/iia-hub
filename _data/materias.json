@@ -403,11 +403,12 @@
     "anio": 4,
     "semestre": 2,
     "codigo": "H209",
-    "sigla": "-",
+    "sigla": "EyO",
     "nombre": "Escritura y Oratoria",
     "correlativas": [],
     "carga_horaria": 114,
-    "tipo": "obligatoria"
+    "tipo": "obligatoria",
+    "fundamentos": true
   },
   {
     "anio": 5,
@@ -469,7 +470,8 @@
       "I402"
     ],
     "carga_horaria": 86,
-    "tipo": "obligatoria"
+    "tipo": "obligatoria",
+    "fundamentos": true
   },
   {
     "anio": 5,
