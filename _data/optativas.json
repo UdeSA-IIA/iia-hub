@@ -6,7 +6,7 @@
     "correlativas_texto": "Ingeniería de Software, Bases de Datos, Redes y Comunicación",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero"
   },
   {
     "codigo": "IOS466",
@@ -15,7 +15,7 @@
     "correlativas_texto": "Algoritmos y Estructuras de Datos, Paradigmas de Programación, Fundamentos de la Inteligencia Artificial",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo"
   },
   {
     "codigo": "IOS462",
@@ -24,7 +24,7 @@
     "correlativas_texto": "Redes y Comunicación, Bases de Datos, Ingeniería de Software",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo"
   },
   {
     "codigo": "IOS468",
@@ -33,7 +33,7 @@
     "correlativas_texto": "Ingeniería de Software",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero"
   },
   {
     "codigo": "IOS464",
@@ -132,7 +132,7 @@
     "correlativas_texto": null,
     "area": "Otras",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo"
   },
   {
     "codigo": "I309",
