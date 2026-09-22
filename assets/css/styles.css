@@ -313,7 +313,7 @@ code {
 }
 
 .page-head { margin-bottom: 2.2rem; }
-.page-head p { max-width: 640px; font-size: 1.02rem; }
+.page-head p { font-size: 1.02rem; }
 
 /* ---------- components ---------- */
 
@@ -369,6 +369,19 @@ code {
   margin-bottom: .9rem;
 }
 
+.tile-persona { text-align: center; }
+.grid-equipo .tile { text-align: center; }
+.grid-equipo .tile .ic { margin-left: auto; margin-right: auto; }
+.grid-equipo .contacto-row { justify-content: center; }
+.tile-foto {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto .9rem;
+  display: block;
+}
+
 .tile.c-accent .ic { background: var(--accent-soft); color: var(--teal); }
 .tile.c-coral .ic { background: var(--coral-soft); color: var(--pink); }
 .tile.c-amber .ic { background: var(--amber-soft); color: var(--amber); }
@@ -376,6 +389,25 @@ code {
 
 .tile h3 { margin-bottom: .3rem; color: var(--ink); font-size: 1.05rem; background: none; -webkit-text-fill-color: var(--ink); }
 .tile p { margin: 0; font-size: .88rem; }
+
+.tile-contactos p { margin-bottom: .9rem; }
+.contacto-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.contacto-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--bg-alt-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .35rem .75rem;
+  text-decoration: none;
+  transition: border-color .14s ease, color .14s ease;
+}
+.tile .contacto-pill .ic { width: auto; height: auto; background: none; margin: 0; font-size: 1rem; }
+.contacto-pill:hover { border-color: var(--pink); color: var(--ink); text-decoration: none; }
 
 /* variante compacta de la grilla "Explorá el sitio" */
 .tiles-compact { gap: .75rem; }
@@ -416,8 +448,8 @@ code {
   mask-image: radial-gradient(600px 300px at 85% 0%, #000 0%, transparent 70%);
 }
 
-.hero h1 { color: #fff; margin-bottom: .5rem; max-width: 640px; -webkit-text-fill-color: initial; background: none; }
-.hero p { color: rgba(255,255,255,.88); max-width: 560px; margin-bottom: 0; font-size: 1.03rem; }
+.hero h1 { color: #fff; margin-bottom: .5rem; -webkit-text-fill-color: initial; background: none; }
+.hero p { color: rgba(255,255,255,.88); margin-bottom: 0; font-size: 1.03rem; }
 .hero .eyebrow { color: var(--teal); }
 
 .badge {
@@ -852,6 +884,8 @@ tr:hover td { background: var(--brand-soft) !important; }
   min-height: 2.1rem;
 }
 
+.last-update { font-size: .82rem; color: var(--ink-faint); margin: 0 0 .3rem; }
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -892,6 +926,21 @@ tr:hover td { background: var(--brand-soft) !important; }
   transition: border-color .14s ease, color .14s ease;
 }
 .btn-ghost:hover { border-color: var(--pink); color: var(--ink); }
+
+.btn-programa {
+  display: inline-block;
+  font-size: .76rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .25rem .7rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color .14s ease, color .14s ease;
+}
+.btn-programa:hover { border-color: var(--pink); color: var(--ink); text-decoration: none; }
 
 /* ---------- novedades ---------- */
 

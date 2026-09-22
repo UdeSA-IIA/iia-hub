@@ -10,8 +10,6 @@ layout: default
 {% assign cal = site.data.calendario %}
 {% assign cal_ev = site.data.calendario_eventos %}
 
-<blockquote>{{ cal.intro | markdownify }}</blockquote>
-
 <div class="section">
   <h2>{{ cal.vista_titulo }}</h2>
   <p>{{ cal.vista_texto }}</p>
@@ -48,5 +46,3 @@ layout: default
     </table>
   </div>
 </div>
-
-<div class="callout">{{ cal.fuente_texto | markdownify }}</div>

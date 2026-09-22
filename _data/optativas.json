@@ -6,7 +6,8 @@
     "correlativas_texto": "Ingeniería de Software, Bases de Datos, Redes y Comunicación",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "primero"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30008&id_curso=73126"
   },
   {
     "codigo": "IOS466",
@@ -15,7 +16,8 @@
     "correlativas_texto": "Algoritmos y Estructuras de Datos, Paradigmas de Programación, Fundamentos de la Inteligencia Artificial",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "segundo"
+    "semestre": "segundo",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30011&id_curso=75345"
   },
   {
     "codigo": "IOS462",
@@ -29,11 +31,12 @@
   {
     "codigo": "IOS468",
     "nombre": "Ingeniería de Software II",
-    "orientacion": null,
+    "orientacion": "Software",
     "correlativas_texto": "Ingeniería de Software",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "primero"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=31208&id_curso=73127"
   },
   {
     "codigo": "IOS464",
@@ -47,11 +50,12 @@
   {
     "codigo": "IOS465",
     "nombre": "Computación Cuántica",
-    "orientacion": null,
+    "orientacion": "Software",
     "correlativas_texto": null,
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=31965&id_curso=75344"
   },
   {
     "codigo": "IOR440",
@@ -60,7 +64,8 @@
     "correlativas_texto": "Física 1, Física 2",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=29145&id_curso=75339"
   },
   {
     "codigo": "IOR444",
@@ -69,7 +74,8 @@
     "correlativas_texto": "Física 1, Física 2, Arquitectura de Computadoras y Sistemas Operativos",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30006&id_curso=75341"
   },
   {
     "codigo": "IOR442",
@@ -78,7 +84,8 @@
     "correlativas_texto": "Dinámica de Sistemas",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30005&id_curso=75340"
   },
   {
     "codigo": "IOR446",
@@ -87,50 +94,55 @@
     "correlativas_texto": "Sistemas de Control",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30007&id_curso=75342"
   },
   {
     "codigo": "ION420",
     "nombre": "Finanzas para Ingeniería",
     "orientacion": "Negocios",
     "correlativas_texto": null,
-    "area": "Negocios",
+    "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30012&id_curso=75335"
   },
   {
     "codigo": "ION422",
     "nombre": "Marketing para Ingeniería",
     "orientacion": "Negocios",
     "correlativas_texto": null,
-    "area": "Negocios",
+    "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30013&id_curso=75336"
   },
   {
-    "codigo": "ION424",
+    "codigo": "ION446",
     "nombre": "Estrategia de Negocios y Liderazgo",
     "orientacion": "Negocios",
     "correlativas_texto": "Finanzas para Ingeniería, Marketing para Ingeniería",
-    "area": "Negocios",
+    "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30014&id_curso=73121"
   },
   {
     "codigo": "ION426",
     "nombre": "Derecho Empresarial y Propiedad Intelectual",
     "orientacion": "Negocios",
     "correlativas_texto": null,
-    "area": "Negocios",
+    "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30015&id_curso=73122"
   },
   {
     "codigo": "I415",
     "nombre": "Innovación Extrema",
     "orientacion": null,
     "correlativas_texto": null,
-    "area": "Otras",
+    "area": "Ingeniería",
     "comentario": null,
     "semestre": "segundo"
   },
@@ -141,47 +153,56 @@
     "correlativas_texto": "Visión Artificial, Procesamiento de Lenguaje Natural",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "primero"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=31207&id_curso=73226"
   },
   {
-    "codigo": null,
+    "codigo": "IB100",
     "nombre": "Biología General",
     "orientacion": null,
     "correlativas_texto": null,
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "otra_carrera": true,
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=28345&id_curso=75327"
   },
   {
-    "codigo": null,
+    "codigo": "IB102",
     "nombre": "Química General",
     "orientacion": null,
     "correlativas_texto": null,
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "otra_carrera": true,
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=28346&id_curso=75328"
   },
   {
-    "codigo": null,
+    "codigo": "IB202",
     "nombre": "Biología Molecular y Celular",
     "orientacion": null,
     "correlativas_texto": "Biología General",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "otra_carrera": true,
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30187&id_curso=75331"
   },
   {
-    "codigo": null,
+    "codigo": "IB216",
     "nombre": "Bioinformática I",
     "orientacion": null,
     "correlativas_texto": "Biología Molecular y Celular",
     "area": "Ingeniería",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo",
+    "otra_carrera": true,
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=30188&id_curso=75333"
   },
   {
     "codigo": null,
-    "nombre": "Introducción a los Procesos de Innvoación",
+    "nombre": "Introducción a los Procesos de Innovación",
     "orientacion": null,
     "correlativas_texto": null,
     "area": "Ingeniería",
@@ -190,9 +211,9 @@
   },
   {
     "codigo": null,
-    "nombre": "Proceso de Innonvación",
+    "nombre": "Proceso de Innovación",
     "orientacion": null,
-    "correlativas_texto": "Introducción a los Procesos de Innvoación",
+    "correlativas_texto": "Introducción a los Procesos de Innovación",
     "area": "Ingeniería",
     "comentario": null,
     "semestre": "ambos"
@@ -204,7 +225,8 @@
     "correlativas_texto": null,
     "area": "Cs. del Comportamiento",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=24445&id_curso=73402"
   },
   {
     "codigo": "CC204",
@@ -213,7 +235,8 @@
     "correlativas_texto": "Neuroanatomía y Neurofisiología",
     "area": "Cs. del Comportamiento",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=25545&id_curso=75207"
   },
   {
     "codigo": "CC400",
@@ -222,7 +245,8 @@
     "correlativas_texto": "Inferencia y Estimación",
     "area": "Cs. del Comportamiento",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=25125&id_curso=73247"
   },
   {
     "codigo": "CC305",
@@ -231,7 +255,8 @@
     "correlativas_texto": "Psicología Cognitiva",
     "area": "Cs. del Comportamiento",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=25790&id_curso=73405"
   },
   {
     "codigo": "A016",
@@ -240,7 +265,8 @@
     "correlativas_texto": null,
     "area": "Negocios",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=19368&id_curso=75542"
   },
   {
     "codigo": "A140",
@@ -249,7 +275,8 @@
     "correlativas_texto": "Matemática II o Análisis Matemático II; Fundamentos de la Administración",
     "area": "Negocios",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=49&id_curso=75143"
   },
   {
     "codigo": "A112",
@@ -258,7 +285,8 @@
     "correlativas_texto": "Comportamiento en las Organizaciones y Liderazgo",
     "area": "Negocios",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=2674&id_curso=75561"
   },
   {
     "codigo": "A354",
@@ -267,7 +295,8 @@
     "correlativas_texto": "Matemática I o Análisis Matemático I",
     "area": "Negocios",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=19326&id_curso=75155"
   },
   {
     "codigo": "A325",
@@ -285,7 +314,8 @@
     "correlativas_texto": "Comportamiento en las Organizaciones y Liderazgo",
     "area": "Negocios",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=15374&id_curso=73308"
   },
   {
     "codigo": "ND400",
@@ -294,7 +324,8 @@
     "correlativas_texto": null,
     "area": "Negocios Digitales",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=19974&id_curso=75392"
   },
   {
     "codigo": "ND310",
@@ -303,7 +334,8 @@
     "correlativas_texto": "Marketing",
     "area": "Negocios Digitales",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=19968&id_curso=75439"
   },
   {
     "codigo": "ND300",
@@ -312,7 +344,8 @@
     "correlativas_texto": "Gestión de Productos Digitales I",
     "area": "Negocios Digitales",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=19973&id_curso=75390"
   },
   {
     "codigo": "A454",
@@ -321,7 +354,8 @@
     "correlativas_texto": "Finanzas I",
     "area": "Negocios",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=19327&id_curso=75166"
   },
   {
     "codigo": "E137",
@@ -330,7 +364,8 @@
     "correlativas_texto": "Estadística II ó Inferencia y Estimación",
     "area": "Economía",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=468&id_curso=73280"
   },
   {
     "codigo": "A128",
@@ -339,7 +374,8 @@
     "correlativas_texto": null,
     "area": "Ciclo de Fundamentos",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=1297&id_curso=75142"
   },
   {
     "codigo": "K030",
@@ -348,7 +384,8 @@
     "correlativas_texto": null,
     "area": "Diseño",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=18159&id_curso=75349"
   },
   {
     "codigo": "K031",
@@ -357,7 +394,8 @@
     "correlativas_texto": null,
     "area": "Diseño",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=18174&id_curso=75350"
   },
   {
     "codigo": "K230",
@@ -366,25 +404,27 @@
     "correlativas_texto": null,
     "area": "Diseño",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=18160&id_curso=75355"
   },
   {
     "codigo": "K341",
     "nombre": "Etnografía y Diseño",
     "orientacion": null,
-    "correlativas_texto": "Tallter de Interacción; Taller de Proyectos: Iteración",
+    "correlativas_texto": "Taller de Interacción; Taller de Proyectos: Iteración",
     "area": "Diseño",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=18167&id_curso=75366"
   },
   {
-    "codigo": null,
+    "codigo": "C271",
     "nombre": "Calculo Avanzado",
     "orientacion": null,
     "correlativas_texto": "Elementos de la Probabilidad y Estadística",
     "area": "Matemáticas",
     "comentario": "Se da cada dos años",
-    "semestre": "ambos"
+    "semestre": "segundo"
   },
   {
     "codigo": "A326",
@@ -393,7 +433,8 @@
     "correlativas_texto": "Matemática II o Análisis Matemático II; Fundamentos de la Administración",
     "area": "Negocios",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=16398&id_curso=75153"
   },
   {
     "codigo": "A451",
@@ -402,7 +443,8 @@
     "correlativas_texto": "Finanzas I; Matemática II ó Análisis Matemático II",
     "area": "Finanzas",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=19329&id_curso=75165"
   },
   {
     "codigo": "F310",
@@ -411,7 +453,7 @@
     "correlativas_texto": "Métodos Numéricos y Optimización; Pensamiento Computacional",
     "area": "Finanzas",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo"
   },
   {
     "codigo": "F414",
@@ -420,7 +462,7 @@
     "correlativas_texto": "Matemática Aplicada a Problemas Financieros",
     "area": "Finanzas",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero"
   },
   {
     "codigo": "F402",
@@ -429,7 +471,8 @@
     "correlativas_texto": "Econometría ó Machine Learning",
     "area": "Finanzas",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=16940&id_curso=73347"
   },
   {
     "codigo": "E040",
@@ -447,7 +490,8 @@
     "correlativas_texto": "Matemática II o Análisis Matemático II",
     "area": "Economía",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=11334&id_curso=75244"
   },
   {
     "codigo": "E021",
@@ -456,7 +500,8 @@
     "correlativas_texto": "Matemática II o Análisis Matemático II; Economía I",
     "area": "Economía",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=702&id_curso=75246"
   },
   {
     "codigo": "E115",
@@ -465,7 +510,8 @@
     "correlativas_texto": "Microeconomía I",
     "area": "Economía",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=465&id_curso=75249"
   },
   {
     "codigo": "E120",
@@ -474,22 +520,24 @@
     "correlativas_texto": "Matemática III ó Métodos Numéricos y Optimización; Macroeconomía I",
     "area": "Economía",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=467&id_curso=73279"
   },
   {
     "codigo": "CC100",
     "nombre": "Psicología Cognitiva",
     "orientacion": null,
-    "correlativas_texto": "Correlativa es Psicología General, pueden no hacerla pero les pedimos que lean 4 capítulos de un manual introductorio para poder cursarla",
+    "correlativas_texto": "Correlativa es Psicología General, pueden no hacerla pero se pide que lean 4 capítulos de un manual introductorio para poder cursarla",
     "area": "Cs. del Comportamiento",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=22605&id_curso=73240"
   },
   {
     "codigo": "CC300",
     "nombre": "Procesos cognitivos en el ciclo vital",
     "orientacion": null,
-    "correlativas_texto": "Psicología Cognitiva, Neuroanatomía y Neurofisiologia",
+    "correlativas_texto": "Psicología Cognitiva, Neuroanatomía y Neurofisiología",
     "area": "Cs. del Comportamiento",
     "comentario": null,
     "semestre": "ambos"
@@ -510,25 +558,28 @@
     "correlativas_texto": null,
     "area": "Cs. del Comportamiento",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "primero",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=24446&id_curso=73403"
   },
   {
     "codigo": "K441",
     "nombre": "Escenario futuros",
     "orientacion": null,
-    "correlativas_texto": "Tallter de Interacción; Taller de Proyectos: Iteración",
+    "correlativas_texto": "Taller de Interacción; Taller de Proyectos: Iteración",
     "area": "Diseño",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=18171&id_curso=75374"
   },
   {
     "codigo": "K440",
     "nombre": "Usabilidad y Factores Humanos",
     "orientacion": null,
-    "correlativas_texto": "Tallter de Interacción; Etnografía y Diseño; Taller de Prospectiva; Taller de Proyectos: Iteración",
+    "correlativas_texto": "Taller de Interacción; Etnografía y Diseño; Taller de Prospectiva; Taller de Proyectos: Iteración",
     "area": "Diseño",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "ambos",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=18170&id_curso=75373"
   },
   {
     "codigo": null,
@@ -540,13 +591,14 @@
     "semestre": "ambos"
   },
   {
-    "codigo": null,
+    "codigo": "CC204",
     "nombre": "Neurociencias Cognitivas",
     "orientacion": null,
-    "correlativas_texto": "Neuroanatomía y neurofisiología",
+    "correlativas_texto": "Neuroanatomía y Neurofisiología",
     "area": "Cs. del Comportamiento",
     "comentario": null,
-    "semestre": "ambos"
+    "semestre": "segundo",
+    "programa_pdf": "https://gestion.udesa.edu.ar/consultas/contenido_materia?id_materia=25545&id_curso=75207"
   },
   {
     "codigo": null,

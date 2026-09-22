@@ -9,6 +9,14 @@ layout: default
 
 <p>{{ tg.intro }}</p>
 
+<h2>{{ tg.modalidades_titulo }}</h2>
+<p>{{ tg.modalidades_texto }}</p>
+<ul>
+  {% for m in tg.modalidades %}
+  <li><strong>{{ m.titulo }}</strong>: {{ m.descripcion }}</li>
+  {% endfor %}
+</ul>
+
 <h2>{{ tg.reglamento_titulo }}</h2>
 <ul>
   <li><strong><a href="{{ tg.reglamento_link_url }}" target="_blank" rel="noopener">{{ tg.reglamento_link_titulo }}</a></strong>: {{ tg.reglamento_link_descripcion }}</li>

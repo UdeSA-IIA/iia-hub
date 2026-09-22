@@ -30,7 +30,7 @@ layout: default
 </div>
 
 <h2>{{ p.plan_trabajo_titulo }}</h2>
-<p>{{ p.plan_trabajo_intro }}</p>
+<p>{{ p.plan_trabajo_intro | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
 <ul>
   {% for item in p.plan_trabajo_items %}
   <li>{{ item }}</li>

@@ -5,19 +5,7 @@
   "hero": {
     "eyebrow": "Ingeniería en Inteligencia Artificial",
     "title": "Todo lo que necesitás para cursar, en un solo lugar",
-    "lead": "Plan de estudios, correlativas, calendario, PPS, intercambios y recursos útiles, pensado para que tomes buenas decisiones sobre tu cursada.",
-    "actions": [
-      {
-        "label": "Ver plan de estudios",
-        "url": "/plan-de-estudios.html",
-        "style": "primary"
-      },
-      {
-        "label": "Preguntas frecuentes",
-        "url": "/faq.html",
-        "style": "secondary"
-      }
-    ]
+    "lead": "Plan de estudios, correlativas, calendario, PPS, intercambios y recursos útiles, pensado para que tomes buenas decisiones sobre tu cursada."
   },
   "tiles": [
     {
@@ -54,6 +42,13 @@
       "title": "Recursos útiles",
       "url": "/recursos.html",
       "desc": "Orientación al estudiante, contactos y reglamentos."
+    },
+    {
+      "icon": "help",
+      "color": "c-coral",
+      "title": "Preguntas frecuentes",
+      "url": "/faq.html",
+      "desc": "Dudas comunes sobre la cursada, respondidas."
     }
   ]
 }

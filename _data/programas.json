@@ -1,0 +1,30 @@
+{
+  "secciones": [
+    {
+      "titulo": "Programas",
+      "tarjetas": [
+        {
+          "icono": "science", "color": "c-accent", "titulo": "Asistente de investigación",
+          "descripcion": "Ayudantía ad honorem que vincula a estudiantes de 3°, 4° o 5° año con los proyectos de investigación de los profesores.<br><br>**Tareas:** bases de datos, experimentos, análisis de bibliografía, trabajo de campo.<br><br>**Dedicación:** 4 a 8 hs semanales, un año académico (renovable).<br><br>**Convocatoria:** anual.",
+          "contactos": [
+            { "icono": "mail", "etiqueta": "asuntosacademicos@udesa.edu.ar", "url": "mailto:asuntosacademicos@udesa.edu.ar" }
+          ]
+        },
+        {
+          "icono": "cast_for_education", "color": "c-amber", "titulo": "Iniciación a la Docencia",
+          "descripcion": "Dirigido a estudiantes del último año o que estén preparando el Trabajo de Graduación.<br><br>**Tareas:** preparar material nuevo, actividades innovadoras, asistencia a clases, gestión de cursos.<br><br>**Dedicación:** máximo 3 hs tutoriales por curso, hasta 32 hs totales en un único curso.<br><br>**Convocatoria:** una vez por semestre, por formulario de inscripción.",
+          "contactos": [
+            { "icono": "mail", "etiqueta": "asuntosacademicos@udesa.edu.ar", "url": "mailto:asuntosacademicos@udesa.edu.ar" }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Charlas y seminarios",
+      "tarjetas": [
+        { "icono": "precision_manufacturing", "color": "c-brand", "titulo": "Ciclo de Charlas: IA aplicada a la industria", "descripcion": "8 encuentros en los que referentes de empresas líderes comparten casos reales de aplicación de IA: desde el diseño e implementación hasta los desafíos técnicos y de negocio." },
+        { "icono": "biotech", "color": "c-accent", "titulo": "BioDrama", "descripcion": "Ciclo de seminarios semanales de la carrera de Ingeniería en Biotecnología, abierto a estudiantes de todas las Ingenierías. Participan referentes académicos, de empresas y del ecosistema start-up en biotecnología, con al menos una visita semestral a una empresa o planta biotecnológica." }
+      ]
+    }
+  ]
+}
