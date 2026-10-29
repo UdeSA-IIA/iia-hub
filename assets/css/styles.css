@@ -482,6 +482,17 @@ code {
 }
 
 .callout p:last-child { margin-bottom: 0; }
+.callout h3 { margin: 0 0 .5rem; color: var(--pink); }
+.callout .contacto-row { margin-top: .8rem; }
+.callout-imagen {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  margin-top: .8rem;
+  margin-bottom: 1.4rem;
+}
 
 /* ---------- contenido escrito en Markdown puro ----------
    Las páginas de contenido son .md sin HTML: Jekyll las compila y

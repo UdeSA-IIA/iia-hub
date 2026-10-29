@@ -11,6 +11,27 @@ layout: default
 
 {% for sec in datos.secciones %}
 {% unless datos.secciones.size == 1 %}<h2>{{ sec.titulo }}</h2>{% endunless %}
+{% if sec.nota %}
+{% comment %}
+  Bloque destacado por fuera de la grilla de tarjetas, para contenido más largo que no
+  entra cómodo en una tarjeta chica (ej. "Oficina de Alumnos de Grado" en Recursos útiles).
+{% endcomment %}
+<div class="callout">
+  {% if sec.nota.titulo %}<h3>{{ sec.nota.titulo }}</h3>{% endif %}
+  <p>{{ sec.nota.texto | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>
+  {% if sec.nota.imagen %}<img class="callout-imagen" src="{{ sec.nota.imagen | relative_url }}" alt="{{ sec.nota.imagen_alt | default: sec.nota.titulo }}">{% endif %}
+  {% if sec.nota.texto2 %}<p>{{ sec.nota.texto2 | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+  {% if sec.nota.contactos %}
+  <div class="contacto-row">
+    {% for c in sec.nota.contactos %}
+    <a class="contacto-pill" href="{{ c.url }}"{% unless c.url contains "mailto:" or c.url contains "tel:" %} target="_blank" rel="noopener"{% endunless %}>
+      {% if c.icono == "whatsapp" %}<i class="ic fa-brands fa-whatsapp" aria-hidden="true"></i>{% else %}<span class="ic ms" aria-hidden="true">{{ c.icono }}</span>{% endif %}{{ c.etiqueta }}
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endif %}
 <div class="grid grid-3 grid-{{ clave }}">
   {% for t in sec.tarjetas %}
   {% comment %}

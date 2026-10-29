@@ -2,36 +2,23 @@
   "secciones": [
     {
       "titulo": "Contactos y oficinas",
+      "nota": {
+        "titulo": "Oficina de Alumnos de Grado",
+        "texto": "Inscripciones, cambio de comisiones, bajas, fechas de examen. Todas las consultas y trámites deben hacerse exclusivamente a través de **U-FORM**, disponible en Gestión > Servicios al Estudiante > Iniciar consulta/trámite.",
+        "imagen": "/assets/imgs/recursos/gestion-iniciar-tramite.png",
+        "imagen_alt": "Menú de Gestión: Servicios al Estudiante > Iniciar trámite/consulta",
+        "texto2": "**Importante:** los mensajes enviados por mail no se responden. Si no encontrás un motivo que se adecúe a tu consulta, usá \"Otros\" o revisá la sección \"¿Qué consultas puedo resolver?\" de +UdeSA para encontrar el contacto de otras áreas y su alcance.",
+        "contactos": [
+          { "icono": "language", "etiqueta": "Página", "url": "https://udesa.edu.ar/oficina-de-alumnos-de-grado" },
+          { "icono": "dashboard", "etiqueta": "U-FORM en Gestión", "url": "https://gestion.udesa.edu.ar" }
+        ]
+      },
       "tarjetas": [
         {
           "icono": "mail", "color": "c-accent", "titulo": "Mail Ingeniería",
           "descripcion": "Consultas particulares de la Escuela.",
           "contactos": [
             { "icono": "mail", "etiqueta": "ingenieria@udesa.edu.ar", "url": "mailto:ingenieria@udesa.edu.ar" }
-          ]
-        },
-        {
-          "icono": "assignment", "color": "c-coral", "titulo": "Oficina de Alumnos de Grado",
-          "descripcion": "Inscripciones, cambio de comisiones, bajas, fechas de examen.",
-          "contactos": [
-            { "icono": "language", "etiqueta": "Página", "url": "https://udesa.edu.ar/oficina-de-alumnos-de-grado" },
-            { "icono": "mail", "etiqueta": "alumnos@udesa.edu.ar", "url": "mailto:alumnos@udesa.edu.ar" }
-          ]
-        },
-        {
-          "icono": "favorite", "color": "c-accent", "titulo": "Orientación al alumno",
-          "descripcion": "Metodología de estudio, dudas vocacionales, situaciones personales.",
-          "contactos": [
-            { "icono": "language", "etiqueta": "Página", "url": "https://udesa.edu.ar/orientacion-al-alumno" },
-            { "icono": "mail", "etiqueta": "orientacionalumno@udesa.edu.ar", "url": "mailto:orientacionalumno@udesa.edu.ar" },
-            { "icono": "whatsapp", "etiqueta": "WhatsApp", "url": "https://wa.me/5491165719081" }
-          ]
-        },
-        {
-          "icono": "local_library", "color": "c-amber", "titulo": "Biblioteca Max von Buch",
-          "descripcion": "Catálogo, salas de estudio y bases de datos.",
-          "contactos": [
-            { "icono": "language", "etiqueta": "Página", "url": "https://udesa.edu.ar/biblioteca" }
           ]
         },
         {
@@ -42,10 +29,19 @@
           ]
         },
         {
-          "icono": "map", "color": "c-brand", "titulo": "Mapa del campus",
-          "descripcion": "PDF oficial de UdeSA.",
+          "icono": "local_library", "color": "c-amber", "titulo": "Biblioteca Max von Buch",
+          "descripcion": "Catálogo, salas de estudio y bases de datos.",
           "contactos": [
-            { "icono": "picture_as_pdf", "etiqueta": "Abrir PDF", "url": "https://www.udesa.edu.ar/sites/default/files/2022-07/2021-udesa-mapa-campus.pdf" }
+            { "icono": "language", "etiqueta": "Página", "url": "https://udesa.edu.ar/biblioteca" }
+          ]
+        },
+        {
+          "icono": "favorite", "color": "c-accent", "titulo": "Orientación al alumno",
+          "descripcion": "Metodología de estudio, dudas vocacionales, situaciones personales.",
+          "contactos": [
+            { "icono": "language", "etiqueta": "Página", "url": "https://udesa.edu.ar/orientacion-al-alumno" },
+            { "icono": "mail", "etiqueta": "orientacionalumno@udesa.edu.ar", "url": "mailto:orientacionalumno@udesa.edu.ar" },
+            { "icono": "whatsapp", "etiqueta": "WhatsApp", "url": "https://wa.me/5491165719081" }
           ]
         },
         {
@@ -83,6 +79,13 @@
           "descripcion": "El \"Blue Book\", el Régimen de Alumnos de Grado y el Código de Ética se descargan desde la Oficina de Alumnos de Grado.",
           "contactos": [
             { "icono": "language", "etiqueta": "Página", "url": "https://udesa.edu.ar/oficina-de-alumnos-de-grado" }
+          ]
+        },
+        {
+          "icono": "map", "color": "c-brand", "titulo": "Mapa del campus",
+          "descripcion": "PDF oficial de UdeSA.",
+          "contactos": [
+            { "icono": "picture_as_pdf", "etiqueta": "Abrir PDF", "url": "https://www.udesa.edu.ar/sites/default/files/2022-07/2021-udesa-mapa-campus.pdf" }
           ]
         }
       ]
