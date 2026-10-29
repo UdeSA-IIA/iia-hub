@@ -4,35 +4,35 @@
       "titulo": "Equipo de la carrera",
       "tarjetas": [
         {
-          "icono": "person", "color": "c-brand", "foto": "https://images.udesa.edu.ar/sites/default/files/styles/ratio_4_3/public/2025-02/Perfil_Robbie.jpg", "titulo": "Roberto Bunge",
+          "icono": "person", "color": "c-brand", "foto": "/assets/imgs/equipo/roberto-bunge.jpg", "titulo": "Roberto Bunge",
           "descripcion": "Director<br>Doctor en Aeronáutica y Astronáutica<br>Stanford University",
           "contactos": [
             { "icono": "mail", "etiqueta": "rbunge@udesa.edu.ar", "url": "mailto:rbunge@udesa.edu.ar" }
           ]
         },
         {
-          "icono": "person", "color": "c-coral", "foto": "https://images.udesa.edu.ar/sites/default/files/styles/ratio_4_3/public/2026-01/Mariano%20B_1.jpg", "titulo": "Mariano Beiró",
+          "icono": "person", "color": "c-coral", "foto": "/assets/imgs/equipo/mariano-beiro.jpg", "titulo": "Mariano Beiró",
           "descripcion": "Codirector<br>Doctor en Ingeniería<br>Universidad de Buenos Aires",
           "contactos": [
             { "icono": "mail", "etiqueta": "mbeiro@udesa.edu.ar", "url": "mailto:mbeiro@udesa.edu.ar" }
           ]
         },
         {
-          "icono": "person", "color": "c-accent", "foto": "https://images.udesa.edu.ar/sites/default/files/styles/square_m/public/2026-01/GastonCastro.png.jpg", "titulo": "Gastón Castro",
+          "icono": "person", "color": "c-accent", "foto": "/assets/imgs/equipo/gaston-castro.jpg", "titulo": "Gastón Castro",
           "descripcion": "Coordinador Académico<br>Doctor en Ciencias de la Computación<br>Universidad de Buenos Aires",
           "contactos": [
             { "icono": "mail", "etiqueta": "gcastro@udesa.edu.ar", "url": "mailto:gcastro@udesa.edu.ar" }
           ]
         },
         {
-          "icono": "person", "color": "c-coral", "titulo": "Noelia Sigüeiro",
+          "icono": "person", "color": "c-coral", "foto": "/assets/imgs/equipo/noelia-sigueiro.jpg", "titulo": "Noelia Sigüeiro",
           "descripcion": "Asistente de Operaciones",
           "contactos": [
             { "icono": "mail", "etiqueta": "nsigueiro@udesa.edu.ar", "url": "mailto:nsigueiro@udesa.edu.ar" }
           ]
         },
         {
-          "icono": "person", "color": "c-brand", "titulo": "Ariana Luppino",
+          "icono": "person", "color": "c-brand", "foto": "/assets/imgs/equipo/ariana-luppino.jpg", "titulo": "Ariana Luppino",
           "descripcion": "Asistente de Operaciones",
           "contactos": [
             { "icono": "mail", "etiqueta": "aluppino@udesa.edu.ar", "url": "mailto:aluppino@udesa.edu.ar" }

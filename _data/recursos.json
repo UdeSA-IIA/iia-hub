@@ -60,6 +60,22 @@
       ]
     },
     {
+      "titulo": "Sistemas",
+      "tarjetas": [
+        {
+          "icono": "dashboard", "color": "c-brand", "titulo": "Gestión",
+          "descripcion": "Sistema de gestión académica de UdeSA.",
+          "contactos": [
+            { "icono": "language", "etiqueta": "Página", "url": "https://gestion.udesa.edu.ar" }
+          ]
+        },
+        {
+          "icono": "support_agent", "color": "c-coral", "titulo": "Salesforce",
+          "descripcion": "Sistema para gestionar tickets con alumnos."
+        }
+      ]
+    },
+    {
       "titulo": "Documentos y reglamentos",
       "tarjetas": [
         {

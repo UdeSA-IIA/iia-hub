@@ -22,7 +22,7 @@ layout: default
   {% if t.foto %}{% assign tile_class = tile_class | append: " tile-persona" %}{% endif %}
   {% if t.contactos %}{% assign tile_class = tile_class | append: " tile-contactos" %}{% endif %}
   <div class="tile {{ tile_class }}">
-    {% if t.foto %}<img class="tile-foto" src="{{ t.foto }}" alt="{{ t.titulo }}">{% else %}<span class="ic ms" aria-hidden="true">{{ t.icono }}</span>{% endif %}
+    {% if t.foto %}<img class="tile-foto" src="{% if t.foto contains '://' %}{{ t.foto }}{% else %}{{ t.foto | relative_url }}{% endif %}" alt="{{ t.titulo }}">{% else %}<span class="ic ms" aria-hidden="true">{{ t.icono }}</span>{% endif %}
     <h3>{{ t.titulo }}</h3>
     {% if t.descripcion %}<p>{{ t.descripcion | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
     {% if t.contactos %}
